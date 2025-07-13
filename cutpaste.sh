@@ -2,25 +2,18 @@
 
 # Written by o3, may contain hallucins, tested, working
 
-
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
-# Usage:  ./cutpaste.sh [path/to/inputlist.txt]
-#         If no argument is given, it defaults to data/inputlist.txt
+# Extended 2025-07-13: you can now add title slides:
+#         title  <HH:MM:SS | MM:SS | SS>  'some text here'
 #
-# Each non-blank, non-comment line of the list file must contain:
-#       youtube  <video-id | full-URL>  <start-time>  <stop-time>
-#
-# Example line:
-#       youtube  dQw4w9WgXcQ  00:15  00:42
+# Example:  title 00:05 'where we are now'
 #
 # ────────────────────────────────────────────────────────────────────
 
 set -euo pipefail
-
-# shell options
-shopt -s extglob nocasematch     # nocasematch → [[ string == youtube ]] is case-insensitive
+shopt -s extglob nocasematch     # [[ foo == youtube ]] / [[ foo == title ]] → case-insensitive
 
 ##############################
 # 1.  Path configuration
@@ -42,6 +35,7 @@ CRF=23
 PRESET="veryfast"
 FPS=30
 WIDTH=1280
+HEIGHT=720            # reference height used for synthetic title slides
 AUD_RATE=48000
 
 VF="fps=${FPS},scale=${WIDTH}:-2,setsar=1,format=yuv420p"
@@ -58,7 +52,6 @@ mkdir -p "$OUT_DIR" "$SNIP_DIR"
 # 4.  Helper functions
 ##############################
 get_vid_id() {
-  # Extract the 11-char YouTube video ID from (almost) any URL
   local url="$1" id=""
   case "$url" in
     *youtu.be/*)  id="${url##*youtu.be/}"; id="${id%%\?*}" ;;
@@ -71,7 +64,7 @@ get_vid_id() {
 download_if_necessary() {
   local url="$1" vid
   vid="$(get_vid_id "$url")"
-  [[ -e "$OUT_DIR/$vid.mp4" ]] && return    # already downloaded
+  [[ -e "$OUT_DIR/$vid.mp4" ]] && return
   "$YTDLP" -o "$OUT_DIR/%(id)s.%(ext)s" --merge-output-format mp4 "$url"
 }
 
@@ -84,11 +77,9 @@ cut_clip() {
   vid="$(get_vid_id "$url")"
   in_file="$OUT_DIR/$vid.mp4"
 
-  # make a nice file name for the snippet
   local s_start=${start//:/-} s_stop=${stop//:/-}
   out_file="$SNIP_DIR/${label}_${s_start}_${s_stop}.mp4"
 
-  # cut / re-encode the requested segment
   ffmpeg -nostdin -hide_banner -loglevel error -y \
          -ss "$start" -to "$stop" -i "$in_file" \
          -vf "$VF" \
@@ -98,7 +89,30 @@ cut_clip() {
          -movflags +faststart \
          "$out_file"
 
-  # Write an ABSOLUTE path to the concat list to avoid any confusion
+  abs_out_file="$(cd "$(dirname "$out_file")" && pwd)/$(basename "$out_file")"
+  printf "file '%s'\n" "$abs_out_file" >> "$CONCAT_FILE"
+}
+
+make_title_slide() {
+  # $1 = duration   $2 = visible text   $3 = numeric label
+  local duration="$1" text="$2" label="$3"
+  local out_file="$SNIP_DIR/${label}_title.mp4"
+
+  # escape single quotes for drawtext
+  local safe_text=${text//\'/\\\'}
+
+  ffmpeg -nostdin -hide_banner -loglevel error -y \
+         -f lavfi -i "color=c=black:s=${WIDTH}x${HEIGHT}" \
+         -f lavfi -i "anullsrc=r=${AUD_RATE}:cl=stereo" \
+         -shortest -t "$duration" \
+         -vf "drawtext=fontcolor=white:fontsize=64:text='${safe_text}':x=(w-text_w)/2:y=(h-text_h)/2,format=yuv420p" \
+         -c:v libx264 -profile:v high -level 4.0 \
+         -preset "$PRESET" -crf "$CRF" \
+         -c:a aac -b:a 192k $AF \
+         -movflags +faststart \
+         "$out_file"
+
+  local abs_out_file
   abs_out_file="$(cd "$(dirname "$out_file")" && pwd)/$(basename "$out_file")"
   printf "file '%s'\n" "$abs_out_file" >> "$CONCAT_FILE"
 }
@@ -108,21 +122,46 @@ cut_clip() {
 ##############################
 idx=0
 while IFS= read -r raw || [[ -n $raw ]]; do
-  [[ $raw =~ ^[[:space:]]*$ ]] && continue   # skip blank lines
-  [[ $raw =~ ^[[:space:]]*# ]] && continue   # skip comments
+  [[ $raw =~ ^[[:space:]]*$ ]] && continue   # blank
+  [[ $raw =~ ^[[:space:]]*# ]] && continue   # comment
 
-  # trim leading/trailing whitespace
+  # trim
   line="${raw#"${raw%%[![:space:]]*}"}"
   line="${line%"${line##*[![:space:]]}"}"
 
-  # split into up to 5 fields: keyword  id/url  start  stop  (extra)
-  read -r keyword id_or_url start stop extra <<<"$line"
+  # split the first few tokens
+  read -r keyword token2 rest <<<"$line"
 
-  # process ONLY if the first word is "youtube"
+  #################################
+  # 5a.  Title-slide lines
+  #################################
+  if [[ $keyword == title ]]; then
+      duration="$token2"
+
+      # pull everything inside single quotes
+      if [[ $line =~ \'(.*)\' ]]; then
+          text="${BASH_REMATCH[1]}"
+      else
+          echo "⚠︎  Malformed title line (missing single-quoted text): $line"
+          continue
+      fi
+
+      idx=$((idx + 1))
+      printf -v label 'clip_%03d' "$idx"
+      make_title_slide "$duration" "$text" "$label"
+      continue
+  fi
+
+  #################################
+  # 5b.  YouTube lines (unchanged)
+  #################################
   [[ $keyword != youtube ]] && continue
-  [[ -n ${extra-} ]]       && continue       # ignore malformed lines
 
-  # turn bare video-ID into full URL
+  # token2 is either a bare 11-char ID or a full URL
+  id_or_url="$token2"
+  read -r start stop extra <<<"$rest"
+  [[ -n ${extra-} ]] && continue   # ignore malformed lines
+
   if [[ $id_or_url =~ ^[A-Za-z0-9_-]{11}$ ]]; then
     url="https://www.youtube.com/watch?v=$id_or_url"
   else
