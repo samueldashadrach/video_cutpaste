@@ -3,7 +3,7 @@
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
-# written by o3, slightly modified July 2025
+# written by o3
 # ────────────────────────────────────────────────────────────────
 
 set -euo pipefail
@@ -102,14 +102,13 @@ make_title_slide() {
   # Turn the two-character sequence “\n” into a real newline (LF)
   local prepared_text=${raw_text//\\n/$'\n'}
 
-  # Wrap each existing line individually; keep REAL newlines   FIX ▼
+  # Wrap each existing line individually; keep REAL newlines
   local wrapped
   wrapped="$(echo -e "$prepared_text" | \
              while IFS= read -r line; do
                fold -s -w "$max_chars" <<<"$line"
              done)"
-  # Remove trailing newline that fold may add
-  wrapped=${wrapped%$'\n'}
+  wrapped=${wrapped%$'\n'}           # drop trailing newline if any
 
   # Escape double quotes for drawtext
   local safe_text=${wrapped//\"/\\\"}
@@ -118,12 +117,10 @@ make_title_slide() {
   # 2.  Render the title slide
   ###############################################################
   ffmpeg -nostdin -hide_banner -loglevel error -y \
-         -f lavfi -i "color=c=black:s=${WIDTH}x${HEIGHT}" \
+         -f lavfi -i "color=c=black:s=${WIDTH}x${HEIGHT}:r=${FPS}" \
          -f lavfi -i "anullsrc=r=${AUD_RATE}:cl=stereo" \
          -shortest -t "$duration" \
-         -vf "drawtext=fontcolor=white:fontsize=${font_size}:\
-line_spacing=10:text='${safe_text}':\
-x=(w-text_w)/2:y=(h-text_h)/2,format=yuv420p" \
+         -vf "${VF},drawtext=fontcolor=white:fontsize=${font_size}:line_spacing=10:text='${safe_text}':x=(w-text_w)/2:y=(h-text_h)/2" \
          -c:v libx264 -profile:v high -level 4.0 \
          -preset "$PRESET" -crf "$CRF" \
          -c:a aac -b:a 192k $AF \
