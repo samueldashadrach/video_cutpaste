@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
-
-# Written by o3, may contain hallucins, tested, working
-
+#
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
-# Extended 2025-07-13: you can now add title slides:
-#         title  <HH:MM:SS | MM:SS | SS>  'some text here'
+# Extended 2025-07-13:
+#   • “title  <HH:MM:SS | MM:SS | SS>  'some text here'”
+#     now supports automatic word-wrapping.
+#   • Put “\n” inside the quoted text to force explicit line breaks.
 #
-# Example:  title 00:05 'where we are now'
+# Example:
+#     title 00:05 'Where we are now\n(and how we got here)'
 #
-# ────────────────────────────────────────────────────────────────────
+# Written by o3, may contain hallucins, tested, working
+# ────────────────────────────────────────────────────────────────
 
 set -euo pipefail
-shopt -s extglob nocasematch     # [[ foo == youtube ]] / [[ foo == title ]] → case-insensitive
+shopt -s extglob nocasematch     # [[ foo == youtube ]] / [[ foo == title ]]
 
 ##############################
 # 1.  Path configuration
@@ -95,17 +97,40 @@ cut_clip() {
 
 make_title_slide() {
   # $1 = duration   $2 = visible text   $3 = numeric label
-  local duration="$1" text="$2" label="$3"
+  local duration="$1" raw_text="$2" label="$3"
   local out_file="$SNIP_DIR/${label}_title.mp4"
 
-  # escape single quotes for drawtext
-  local safe_text=${text//\'/\\\'}
+  ###############################################################
+  # 1.  Honour explicit “\n”, then soft-wrap any long line
+  ###############################################################
+  local font_size=64                # keep in sync with drawtext below
+  local avg_glyph_px=$(( font_size * 55 / 100 ))   # ≈0.55×font-size
+  local max_chars=$(( WIDTH / avg_glyph_px ))
 
+  # Turn the two-character sequence “\n” into a real newline
+  local prepared_text=${raw_text//\\n/$'\n'}
+
+  # Wrap each existing line individually
+  local wrapped
+  wrapped="$(echo -e "$prepared_text"           \
+            | while IFS= read -r line; do
+                fold -s -w "$max_chars" <<<"$line"
+              done                              \
+            | paste -sd '\\n' -)"
+
+  # Escape single quotes for drawtext
+  local safe_text=${wrapped//\'/\\\'}
+
+  ###############################################################
+  # 2.  Render the title slide
+  ###############################################################
   ffmpeg -nostdin -hide_banner -loglevel error -y \
          -f lavfi -i "color=c=black:s=${WIDTH}x${HEIGHT}" \
          -f lavfi -i "anullsrc=r=${AUD_RATE}:cl=stereo" \
          -shortest -t "$duration" \
-         -vf "drawtext=fontcolor=white:fontsize=64:text='${safe_text}':x=(w-text_w)/2:y=(h-text_h)/2,format=yuv420p" \
+         -vf "drawtext=fontcolor=white:fontsize=${font_size}:\
+line_spacing=10:text='${safe_text}':\
+x=(w-text_w)/2:y=(h-text_h)/2,format=yuv420p" \
          -c:v libx264 -profile:v high -level 4.0 \
          -preset "$PRESET" -crf "$CRF" \
          -c:a aac -b:a 192k $AF \
@@ -153,7 +178,7 @@ while IFS= read -r raw || [[ -n $raw ]]; do
   fi
 
   #################################
-  # 5b.  YouTube lines (unchanged)
+  # 5b.  YouTube lines
   #################################
   [[ $keyword != youtube ]] && continue
 
