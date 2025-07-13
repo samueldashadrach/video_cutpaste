@@ -39,7 +39,7 @@ youtube SEkGLj0bwAU 8:38 9:11
 youtube 6fEdZkteI_M 0:18 0:54
 youtube 6fEdZkteI_M 0:54 1:59
 youtube 6fEdZkteI_M 2:55 3:05
-title 00:03 "Ilya attempted ousting cofounder Sam Altman from OpenAI board. He has now quit OpenAI to start his own company called Safe Superintelligence Inc"
+title 00:06 "Ilya attempted ousting cofounder Sam Altman from OpenAI board.\nHe has now quit OpenAI to start his own company called Safe Superintelligence Inc"
 
 title 00:03 "Dario Amodei\nCofounder of Anthropic\nFounded by ex-OpenAI employees to compete with OpenAI"
 youtube gAaCqj6j5sQ 7:12 8:29

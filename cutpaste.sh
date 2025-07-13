@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
-#               clips, and concatenate them into a single MP4.
+#               clips, loudness-normalise each one to –16 LUFS and
+#               concatenate everything into a single MP4.
 #
 # written by o3
 # ────────────────────────────────────────────────────────────────
 
 set -euo pipefail
-shopt -s extglob nocasematch     # [[ foo == youtube ]] / [[ foo == title ]]
+shopt -s extglob nocasematch        # [[ foo == youtube ]] / [[ foo == title ]]
 
 ##############################
 # 1.  Path configuration
@@ -34,6 +35,14 @@ AUD_RATE=48000
 
 VF="fps=${FPS},scale=${WIDTH}:-2,setsar=1,format=yuv420p"
 AF="-ar ${AUD_RATE}"
+
+##############################
+# 2a. Loudness target (EBU R-128 / streaming-friendly)
+##############################
+TARGET_I=-16          # integrated loudness (LUFS)
+TARGET_LRA=11         # allowed loudness range (LU)
+TARGET_TP=-1.5        # true peak ceiling (dBTP)
+LOUDNORM="loudnorm=I=${TARGET_I}:LRA=${TARGET_LRA}:TP=${TARGET_TP}"
 
 ##############################
 # 3.  Prepare filesystem
@@ -80,6 +89,7 @@ cut_clip() {
          -c:v libx264 -profile:v high -level 4.0 \
          -preset "$PRESET" -crf "$CRF" \
          -c:a aac -b:a 192k $AF \
+         -af "$LOUDNORM" \
          -movflags +faststart \
          "$out_file"
 
@@ -114,7 +124,7 @@ make_title_slide() {
   local safe_text=${wrapped//\"/\\\"}
 
   ###############################################################
-  # 2.  Render the title slide
+  # 2.  Render the title slide (silence stays silence, no loudnorm)
   ###############################################################
   ffmpeg -nostdin -hide_banner -loglevel error -y \
          -f lavfi -i "color=c=black:s=${WIDTH}x${HEIGHT}:r=${FPS}" \
