@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-#
+
+# Written by o3, may contain hallucins, tested, working
+
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
