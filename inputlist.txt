@@ -30,23 +30,23 @@ youtube kMUdrUP-QCs 8:56 9:20
 youtube kMUdrUP-QCs 11:03 11:43
 youtube kMUdrUP-QCs 12:14 12:37
 youtube kMUdrUP-QCs 13:50 14:09
-youtube kMUdrUP-QCs 14:25 14:32
-youtube Kc1atfJkiJU 29:58 30:28
+youtube kMUdrUP-QCs 14:25 14:33
+youtube Kc1atfJkiJU 29:59 30:28
 youtube Kc1atfJkiJU 36:28 36:54
 
-title 00:03 "Ilya Sutskever\nCofounder of OpenAI\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton"
+title 00:06 "Ilya Sutskever\nCofounder of OpenAI\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton"
 youtube SEkGLj0bwAU 8:38 9:11
 youtube 6fEdZkteI_M 0:18 0:54
 youtube 6fEdZkteI_M 0:54 1:59
 youtube 6fEdZkteI_M 2:55 3:05
 title 00:06 "Ilya attempted ousting cofounder Sam Altman from OpenAI board.\nHe has now quit OpenAI to start his own company called Safe Superintelligence Inc"
 
-title 00:03 "Dario Amodei\nCofounder of Anthropic\nFounded by ex-OpenAI employees to compete with OpenAI"
+title 00:06 "Dario Amodei\nCofounder of Anthropic\nFounded by ex-OpenAI employees to compete with OpenAI"
 youtube gAaCqj6j5sQ 7:12 8:29
 youtube ugvHCXCOmm4 0:00:00 0:00:45
-youtube ZC58H12VOHk 1:21:33 1:21:54
+youtube ZC58H12VOHk 1:21:34 1:21:54
 youtube ZC58H12VOHk 1:58:51 1:59:08
-youtube youtube gAaCqj6j5sQ 39:53 40:48
+youtube gAaCqj6j5sQ 39:53 40:48
 youtube gAaCqj6j5sQ 1:19:53 1:20:49
 youtube gAaCqj6j5sQ 1:38:32 1:39:07
 youtube gAaCqj6j5sQ 51:06 51:19
