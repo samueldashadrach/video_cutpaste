@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #
-# written by o3, may contain hallucins
-#
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
+# written by o3, slightly modified July 2025
 # ────────────────────────────────────────────────────────────────
 
 set -euo pipefail
@@ -100,21 +99,16 @@ make_title_slide() {
   local avg_glyph_px=$(( font_size * 55 / 100 ))   # ≈0.55×font-size
   local max_chars=$(( WIDTH / avg_glyph_px ))
 
-  # Turn the two-character sequence “\n” into a real newline
+  # Turn the two-character sequence “\n” into a real newline (LF)
   local prepared_text=${raw_text//\\n/$'\n'}
 
-  # Wrap each existing line individually
+  # Wrap each existing line individually; keep REAL newlines   FIX ▼
   local wrapped
-  wrapped="$(echo -e "$prepared_text"           \
-            | while IFS= read -r line; do
-                fold -s -w "$max_chars" <<<"$line"
-              done                              \
-            | paste -sd '\\n' -)"
-
-  wrapped="$(echo -e "$prepared_text" | while IFS= read -r line; do
-                fold -s -w "$max_chars" <<<"$line"
-              done)"
-  # drop the very last newline so we don’t get a blank line at the end
+  wrapped="$(echo -e "$prepared_text" | \
+             while IFS= read -r line; do
+               fold -s -w "$max_chars" <<<"$line"
+             done)"
+  # Remove trailing newline that fold may add
   wrapped=${wrapped%$'\n'}
 
   # Escape double quotes for drawtext
@@ -149,7 +143,7 @@ while IFS= read -r raw || [[ -n $raw ]]; do
   [[ $raw =~ ^[[:space:]]*$ ]] && continue   # blank
   [[ $raw =~ ^[[:space:]]*# ]] && continue   # comment
 
-  # trim
+  # trim leading / trailing whitespace
   line="${raw#"${raw%%[![:space:]]*}"}"
   line="${line%"${line##*[![:space:]]}"}"
 
@@ -162,11 +156,12 @@ while IFS= read -r raw || [[ -n $raw ]]; do
   if [[ $keyword == title ]]; then
       duration="$token2"
 
-      # pull everything inside single quotes
-      if [[ $line =~ \'(.*)\' ]]; then
-          text="${BASH_REMATCH[1]}"
+      # Pull everything inside DOUBLE quotes  (keeps \" if present)
+      if [[ $line == *\"*\"* ]]; then
+          text=${line#*\"}        # delete up to first "
+          text=${text%\"*}        # delete from last " to EOL
       else
-          echo "⚠︎  Malformed title line (missing single-quoted text): $line"
+          echo "⚠︎  Malformed title line (missing double-quoted text): $line"
           continue
       fi
 

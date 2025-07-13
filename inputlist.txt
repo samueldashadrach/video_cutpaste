@@ -9,7 +9,7 @@ youtube qrvK_KuIeJk 11:42 12:01
 youtube 66WiF8fXL0k 6:31 7:02
 youtube qrvK_KuIeJk 5:22 6:11
 
-title 00:03 "Yoshua Bengio, Turing award winner, Godfather of AI"
+title 00:03 "Yoshua Bengio\nTuring award winner, Godfather of AI"
 youtube qe9QSCF-d88 4:11 4:29
 youtube qe9QSCF-d88 4:29 5:11
 youtube qe9QSCF-d88 8:04 8:41
@@ -18,13 +18,13 @@ youtube qe9QSCF-d88 9:26 10:23
 youtube c4Zx849dOiY 17:58 18:26
 youtube c4Zx849dOiY 19:02 19:43
 
-title 00:03 "Rich Sutton, Inventor of reinforcement learning, discovered Bitter Lesson"
+title 00:03 "Rich Sutton\nInventor of reinforcement learning\nDiscovered Bitter Lesson"
 youtube FLOL2f4iHKA 15:06 15:36
 youtube FLOL2f4iHKA 17:31 18:11
 youtube FLOL2f4iHKA 18:27 18:38
 youtube FLOL2f4iHKA 26:05 26:21
 
-title 00:03 "Shane Legg, Cofounder of Deepmind, worlds first AGI company"
+title 00:03 "Shane Legg\nCofounder of Deepmind\nWorlds first AGI company"
 youtube kMUdrUP-QCs 3:43 3:58
 youtube kMUdrUP-QCs 8:56 9:20
 youtube kMUdrUP-QCs 11:03 11:43
@@ -34,14 +34,14 @@ youtube kMUdrUP-QCs 14:25 14:32
 youtube Kc1atfJkiJU 29:58 30:28
 youtube Kc1atfJkiJU 36:28 36:54
 
-title 00:03 "Ilya Sutskever, Cofounder of OpenAI, founded to compete with Deepmind. Co-inventor of AlexNet along with Geoffrey Hinton"
+title 00:03 "Ilya Sutskever\nCofounder of OpenAI\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton"
 youtube SEkGLj0bwAU 8:38 9:11
 youtube 6fEdZkteI_M 0:18 0:54
 youtube 6fEdZkteI_M 0:54 1:59
 youtube 6fEdZkteI_M 2:55 3:05
-title 00:03 "Ilya attempted ousting cofounder Sam Altman from OpenAI"s board. He has now quit OpenAI to start his own company called Safe Superintelligence Inc"
+title 00:03 "Ilya attempted ousting cofounder Sam Altman from OpenAI board. He has now quit OpenAI to start his own company called Safe Superintelligence Inc"
 
-title 00:03 "Dario Amodei, Cofounder of Anthropic, founded by ex-OpenAI employees to compete with OpenAI"
+title 00:03 "Dario Amodei\nCofounder of Anthropic\nFounded by ex-OpenAI employees to compete with OpenAI"
 youtube gAaCqj6j5sQ 7:12 8:29
 youtube ugvHCXCOmm4 0:00:00 0:00:45
 youtube ZC58H12VOHk 1:21:33 1:21:54
@@ -56,10 +56,10 @@ youtube gAaCqj6j5sQ 23:35 24:05
 youtube gAaCqj6j5sQ 12:10 12:33
 youtube gAaCqj6j5sQ 15:55 16:32
 
-title 00:03 "Sam Altman, Cofounder of OpenAI, now continues without Ilya"
+title 00:03 "Sam Altman\nCofounder of OpenAI\n(now continues without Ilya)"
 youtube GhIJs4zbH0o 0:00:00 0:00:45
 
-title 00:03 "Elon Musk, Cofounder of xAI, a newly founded AGI company. Also funded OpenAI"
+title 00:03 "Elon Musk\nEarly founder of OpenAI\nCofounder of xAI, a newly founded AGI company"
 youtube Hl1zEzVUV7w 3:44:14 3:44:27
 youtube cFIlta1GkiE 35:25 36:09
 youtube cFIlta1GkiE 42:02 42:19
