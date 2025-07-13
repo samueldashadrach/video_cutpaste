@@ -1,11 +1,6 @@
 
 fFLVyWBDTfo 4:27 4:48
 
-SEkGLj0bwAU 8:38 9:11
-6fEdZkteI_M 0:18 0:54
-6fEdZkteI_M 0:54 1:59
-6fEdZkteI_M 2:55 3:05
-
 66WiF8fXL0k 0:00 0:07
 qrvK_KuIeJk 0:53 1:39
 qrvK_KuIeJk 10:12 10:25
@@ -34,6 +29,11 @@ kMUdrUP-QCs 13:49 14:09
 kMUdrUP-QCs 14:25 14:32
 Kc1atfJkiJU 29:58 30:28
 Kc1atfJkiJU 36:28 36:54
+
+SEkGLj0bwAU 8:38 9:11
+6fEdZkteI_M 0:18 0:54
+6fEdZkteI_M 0:54 1:59
+6fEdZkteI_M 2:55 3:05
 
 gAaCqj6j5sQ 7:12 8:29
 ugvHCXCOmm4 0:00:00 0:00:45
