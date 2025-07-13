@@ -47,6 +47,7 @@ AF="-ar ${AUD_RATE}"
 ##############################
 # 3.  Prepare filesystem
 ##############################
+rm -rf "$SNIP_DIR"
 mkdir -p "$OUT_DIR" "$SNIP_DIR"
 : > "$CONCAT_FILE"            # truncate concat list
 
