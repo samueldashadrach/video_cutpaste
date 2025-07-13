@@ -9,15 +9,17 @@
 #         If no argument is given, it defaults to data/inputlist.txt
 #
 # Each non-blank, non-comment line of the list file must contain:
-#       <video-id | full-URL>  <start-time>  <stop-time>
+#       youtube  <video-id | full-URL>  <start-time>  <stop-time>
 #
 # Example line:
-#       dQw4w9WgXcQ  00:15  00:42
+#       youtube  dQw4w9WgXcQ  00:15  00:42
 #
 # ────────────────────────────────────────────────────────────────────
 
 set -euo pipefail
-shopt -s extglob
+
+# shell options
+shopt -s extglob nocasematch     # nocasematch → [[ string == youtube ]] is case-insensitive
 
 ##############################
 # 1.  Path configuration
@@ -68,7 +70,7 @@ get_vid_id() {
 download_if_necessary() {
   local url="$1" vid
   vid="$(get_vid_id "$url")"
-  [[ -e "$OUT_DIR/$vid.mp4" ]] && return        # already downloaded
+  [[ -e "$OUT_DIR/$vid.mp4" ]] && return    # already downloaded
   "$YTDLP" -o "$OUT_DIR/%(id)s.%(ext)s" --merge-output-format mp4 "$url"
 }
 
@@ -95,10 +97,7 @@ cut_clip() {
          -movflags +faststart \
          "$out_file"
 
-  # ------------------------------------------------------------------
-  # IMPORTANT FIX: write an ABSOLUTE path to the concat list,
-  # so FFmpeg never prepends another "data/" layer
-  # ------------------------------------------------------------------
+  # Write an ABSOLUTE path to the concat list to avoid any confusion
   abs_out_file="$(cd "$(dirname "$out_file")" && pwd)/$(basename "$out_file")"
   printf "file '%s'\n" "$abs_out_file" >> "$CONCAT_FILE"
 }
@@ -108,16 +107,19 @@ cut_clip() {
 ##############################
 idx=0
 while IFS= read -r raw || [[ -n $raw ]]; do
-  [[ $raw =~ ^[[:space:]]*$ ]] && continue      # skip blank lines
-  [[ $raw =~ ^[[:space:]]*# ]] && continue      # skip comments
+  [[ $raw =~ ^[[:space:]]*$ ]] && continue   # skip blank lines
+  [[ $raw =~ ^[[:space:]]*# ]] && continue   # skip comments
 
   # trim leading/trailing whitespace
   line="${raw#"${raw%%[![:space:]]*}"}"
   line="${line%"${line##*[![:space:]]}"}"
 
-  # split the line into up to 3 fields
-  read -r id_or_url start stop extra <<<"$line"
-  [[ -n ${extra-} ]] && continue                # ignore malformed lines
+  # split into up to 5 fields: keyword  id/url  start  stop  (extra)
+  read -r keyword id_or_url start stop extra <<<"$line"
+
+  # process ONLY if the first word is "youtube"
+  [[ $keyword != youtube ]] && continue
+  [[ -n ${extra-} ]]       && continue       # ignore malformed lines
 
   # turn bare video-ID into full URL
   if [[ $id_or_url =~ ^[A-Za-z0-9_-]{11}$ ]]; then
