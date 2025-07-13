@@ -5,15 +5,6 @@
 # cutpaste.sh – download YouTube videos (if needed), cut the requested
 #               clips, and concatenate them into a single MP4.
 #
-# Extended 2025-07-13:
-#   • “title  <HH:MM:SS | MM:SS | SS>  'some text here'”
-#     now supports automatic word-wrapping.
-#   • Put “\n” inside the quoted text to force explicit line breaks.
-#
-# Example:
-#     title 00:05 'Where we are now\n(and how we got here)'
-#
-# Written by o3, may contain hallucins, tested, working
 # ────────────────────────────────────────────────────────────────
 
 set -euo pipefail
@@ -120,8 +111,14 @@ make_title_slide() {
               done                              \
             | paste -sd '\\n' -)"
 
-  # Escape single quotes for drawtext
-  local safe_text=${wrapped//\'/\\\'}
+  wrapped="$(echo -e "$prepared_text" | while IFS= read -r line; do
+                fold -s -w "$max_chars" <<<"$line"
+              done)"
+  # drop the very last newline so we don’t get a blank line at the end
+  wrapped=${wrapped%$'\n'}
+
+  # Escape double quotes for drawtext
+  local safe_text=${wrapped//\"/\\\"}
 
   ###############################################################
   # 2.  Render the title slide
