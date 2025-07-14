@@ -80,8 +80,8 @@ cut_clip() {
   vid="$(get_vid_id "$url")"
   in_file="$OUT_DIR/$vid.mp4"
 
-  local s_start=${start//:/-} s_stop=${stop//:/-}
-  out_file="$SNIP_DIR/${label}_${s_start}_${s_stop}.mp4"
+  local s_start=${start//:/_} s_stop=${stop//:/_}
+  out_file="$SNIP_DIR/${label}_${vid}_${s_start}_${s_stop}.mp4"
 
   ffmpeg -nostdin -hide_banner -loglevel error -y \
          -ss "$start" -to "$stop" -i "$in_file" \
