@@ -69,4 +69,11 @@ youtube GhIJs4zbH0o 0:00:00 0:00:45
 youtube GhIJs4zbH0o 7:06 7:47
 
 title 00:02 "Bill Gates\nCofounder of Microsoft\nwhich owns 49 percent stake in OpenAI"
-youtube egeqfUGiETY 39:18 39:57
+youtube egeqfUGiETY 39:18 39:58
+
+title 00:03 "Mark Zuckerbeg\nFounder of Facebook\nTrained worlds largest open source AI model"
+youtube bc6uFV9CJGg 35:26 35:44
+youtube bc6uFV9CJGg 37:41 38:05
+youtube bc6uFV9CJGg 43:38 43:53
+
+
