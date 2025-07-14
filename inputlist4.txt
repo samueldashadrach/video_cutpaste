@@ -2,7 +2,7 @@
 title 00:06 "How soon could AI become smarter than us?"
 youtube 66WiF8fXL0k 0:00 0:07
 title 00:01 "Geoffrey Hinton\n2029"
-youtube c4Zx849dOiY 19:02 19:16
+youtube c4Zx849dOiY 19:02 19:17
 title 00:01 "Yoshua Bengio\n2027"
 youtube kMUdrUP-QCs 3:43 3:58
 title 00:01 "Shane Legg\n2028"
