@@ -11,7 +11,7 @@ title 00:01 "Ilya Sutskever\n2030"
 youtube ugvHCXCOmm4 0:00:00 0:00:32
 title 00:01 "Dario Amodei\n2026"
 youtube xXCBz_8hM9w 1:48 1:58
-youtube xXCBz_8hM9w 2:08 2:32
+youtube xXCBz_8hM9w 2:08 2:33
 title 00:01 "Sam Altman\n2028"
 youtube cFIlta1GkiE 42:02 42:19
 title 00:01 "Elon Musk\n2025"
