@@ -12,4 +12,4 @@ Uses yt-dlp for downloading youtube videos, uses ffmpeg for all video editing pu
 
 yt_dlp works better on residential IPs not datacentre IPs, but make sure your residential ISP provides enough bandwidth + data cap to download lots of videos 
 
-tested on macOS Sequoia 15.5, runs bash 3.2.57 (old version), on 2025-07-13
+successful test on macOS Sequoia 15.5, bash 3.2.57 (old version), on 2025-07-14
