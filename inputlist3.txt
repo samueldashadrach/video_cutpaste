@@ -8,7 +8,7 @@ youtube kMUdrUP-QCs 3:43 3:58
 title 00:01 "Shane Legg\n2028"
 youtube 6fEdZkteI_M 0:18 0:38
 title 00:01 "Ilya Sutskever\n2030"
-youtube ugvHCXCOmm4 0:00:00 0:00:31
+youtube ugvHCXCOmm4 0:00:00 0:00:32
 title 00:01 "Dario Amodei\n2026"
 youtube xXCBz_8hM9w 1:48 1:58
 youtube xXCBz_8hM9w 2:08 2:32
