@@ -78,7 +78,7 @@ title 00:03 "Sam Altman\nCofounder of OpenAI\n(now continues without Ilya)"
 youtube GhIJs4zbH0o 0:00:00 0:00:45
 youtube GhIJs4zbH0o 7:06 7:47
 youtube GhIJs4zbH0o 1:20 1:39
-youtube GhIJs4zbH0o 27:01 27:53
+youtube GhIJs4zbH0o 27:01 27:54
 youtube GhIJs4zbH0o 35:12 35:37
 
 title 00:02 "Bill Gates\nCofounder of Microsoft\which owns 49 percent stake in OpenAI"
