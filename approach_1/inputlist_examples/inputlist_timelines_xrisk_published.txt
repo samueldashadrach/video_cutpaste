@@ -1,0 +1,86 @@
+
+youtube fFLVyWBDTfo 4:27 4:48
+
+title 00:03 "Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet"
+youtube 66WiF8fXL0k 0:00 0:07
+youtube qrvK_KuIeJk 0:53 1:39
+youtube qrvK_KuIeJk 10:12 10:25
+youtube qrvK_KuIeJk 11:42 12:01
+youtube 66WiF8fXL0k 6:31 7:02
+youtube qrvK_KuIeJk 5:22 6:12
+
+title 00:03 "Yoshua Bengio\nTuring award winner, Godfather of AI"
+youtube qe9QSCF-d88 4:11 4:29
+youtube qe9QSCF-d88 4:29 5:12
+youtube qe9QSCF-d88 8:05 8:41
+youtube qe9QSCF-d88 8:41 8:55
+youtube qe9QSCF-d88 9:26 10:23
+youtube c4Zx849dOiY 17:58 18:27
+youtube c4Zx849dOiY 19:02 19:43
+
+title 00:03 "Rich Sutton\nInventor of reinforcement learning\nDiscovered Bitter Lesson"
+youtube FLOL2f4iHKA 15:06 15:36
+youtube FLOL2f4iHKA 17:31 18:11
+youtube FLOL2f4iHKA 18:27 18:38
+youtube FLOL2f4iHKA 26:05 26:21
+
+title 00:03 "Shane Legg\nCofounder of Deepmind\nWorlds first AGI company"
+youtube kMUdrUP-QCs 3:43 3:58
+youtube kMUdrUP-QCs 8:56 9:20
+youtube kMUdrUP-QCs 11:03 11:43
+youtube kMUdrUP-QCs 12:14 12:37
+youtube kMUdrUP-QCs 13:50 14:09
+youtube kMUdrUP-QCs 14:25 14:33
+youtube Kc1atfJkiJU 29:59 30:28
+youtube Kc1atfJkiJU 36:28 36:54
+
+title 00:06 "Ilya Sutskever\nCofounder of OpenAI\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton"
+youtube SEkGLj0bwAU 8:38 9:11
+youtube 6fEdZkteI_M 0:18 0:54
+youtube 6fEdZkteI_M 0:54 1:59
+youtube 6fEdZkteI_M 2:55 3:05
+title 00:06 "Ilya attempted ousting cofounder Sam Altman from OpenAI board. Now resigned from OpenAI.\nCofounder of Safe Superintelligence Inc, a newly founded AGI company"
+
+title 00:06 "Dario Amodei\nCofounder of Anthropic\nFounded by ex-OpenAI employees to compete with OpenAI"
+youtube ugvHCXCOmm4 0:00:00 0:00:45
+youtube ZC58H12VOHk 1:21:34 1:21:55
+youtube ZC58H12VOHk 1:58:49 1:59:08
+youtube gAaCqj6j5sQ 39:53 40:48
+youtube gAaCqj6j5sQ 1:19:53 1:20:49
+youtube gAaCqj6j5sQ 1:38:32 1:39:07
+youtube gAaCqj6j5sQ 51:06 51:20
+youtube gAaCqj6j5sQ 22:00 22:30
+youtube gAaCqj6j5sQ 22:41 23:03
+youtube gAaCqj6j5sQ 23:35 24:05
+title 00:03 "Dario Amodei, talks about founding Anthropic"
+youtube gAaCqj6j5sQ 7:12 8:29
+youtube gAaCqj6j5sQ 12:10 12:33
+youtube gAaCqj6j5sQ 15:55 16:33
+
+title 00:03 "Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, a newly founded AGI company"
+youtube Hl1zEzVUV7w 3:44:14 3:44:27
+youtube cFIlta1GkiE 35:25 36:10
+youtube cFIlta1GkiE 42:02 42:19
+youtube cFIlta1GkiE 42:47 42:57
+youtube 3JkkWfzc4Jg 2:47 3:27
+
+title 00:03 "Mark Zuckerberg\nFounder of Facebook\nReleased worlds largest open source AI model"
+youtube bc6uFV9CJGg 00:00 00:07
+youtube rYXeQbTuVl0 13:38 13:49
+youtube rYXeQbTuVl0 1:09:14 1:09:55
+youtube bc6uFV9CJGg 43:38 43:54
+youtube bc6uFV9CJGg 45:16 45:44
+youtube bc6uFV9CJGg 35:26 35:44
+youtube bc6uFV9CJGg 37:41 38:05
+youtube rYXeQbTuVl0 15:34 16:12
+
+title 00:03 "Sam Altman\nCofounder of OpenAI\n(now continues without Ilya)"
+youtube GhIJs4zbH0o 0:00:00 0:00:45
+youtube GhIJs4zbH0o 7:06 7:47
+youtube GhIJs4zbH0o 1:20 1:39
+youtube GhIJs4zbH0o 27:01 27:54
+youtube GhIJs4zbH0o 35:12 35:37
+youtube xXCBz_8hM9w 1:48 2:32
+
+title 00:03 "Bill Gates\nCofounder of Microsoft\nwhich owns 49 percent stake in OpenAI"
+youtube egeqfUGiETY 39:18 39:58

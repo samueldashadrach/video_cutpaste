@@ -1,0 +1,15 @@
+
+title 00:10 "Jurgen Schmidhuber\nDirector of Swiss AI lab IDSIA for 25 years\n* Marcus Hutter invented AIXI at IDSIA. Became senior researcher at Deepmind\n* Shane Legg completed PhD thesis under Marcus Hutter at IDSIA. Shane Legg became cofounder of Deepmind\n* Schmidhuber and Sepp Hochreiter invented LSTM. Hochreiter became Deepminds 1st employee"
+
+title 00:02 "AI's goals are not human goals"
+youtube q27XMPm5wg8 41:12 41:25
+youtube q27XMPm5wg8 42:28 42:44
+
+title 00:02 "AI will automate science"
+youtube 3FIo6evmweo 1:12 1:46
+
+title 00:02 "AI will colonise the galaxies"
+youtube 3FIo6evmweo 1:12:43 1:12:59
+title 00:01 "(They refers to AI here)"
+youtube 3FIo6evmweo 1:14:16 1:14:38
+youtube 3FIo6evmweo 1:15:10 1:15:31
