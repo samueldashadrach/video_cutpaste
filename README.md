@@ -1,8 +1,10 @@
-2025-07-14
+2025-07-23
 
 # README
 
 Download videos from youtube, cut chunks based on time intervals provided, normalise loudness, add title slides, combine into a single video. Uses yt-dlp for downloading youtube videos, uses ffmpeg for all video editing purposes.
+
+#### approach 1
 
 Usage
  - Download latest release of yt-dlp (older version may not work). Set env variable YTDLP with path to yt-dlp binary.
@@ -11,3 +13,7 @@ Usage
  - `./cutpaste.sh inputlist.txt`
 
 successful test on macOS Sequoia 15.5, bash 3.2.57 (old version), on 2025-07-14
+
+#### approach 2
+
+WIP
