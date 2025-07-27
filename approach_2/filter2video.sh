@@ -45,7 +45,7 @@ ln -sf "$vpre_path" "$HOME/.ffmpeg/${vpre_name}.ffpreset"
 ln -sf "$apre_path" "$HOME/.ffmpeg/${apre_name}.ffpreset"
 
 cmd=(
-  ffmpeg -y -loglevel info -hwaccel videotoolbox
+  ffmpeg -y -loglevel error -hwaccel videotoolbox
 )
 for f in "${inputs[@]}"
 do cmd+=(
