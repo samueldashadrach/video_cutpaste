@@ -1,13 +1,27 @@
 # 0: -HzgcbRXUK8
 # 1: i2W-fHE96tc
 # 2: yr0GiSgUvPU
+# 3: kMUdrUP-QCs
+# 4: 9iqn1HhFJ6c
+# 5: n13GppYIMg4
+# 6: SEkGLj0bwAU
 
-title	6	Can AI wipe out humanity by 2030?
+title	3	Can AI wipe out humanity by 2030?
 title	3	Demis Hassabis\nCofounder of Google Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
 
-file	0	7089	7095
-file	0	7113	7125
-
+file	0	7089	7094
+file	0	7113	7126
 file	1	227	234
-
 file	2	1552	1586
+
+title	3	Shane Legg\nCofounder of Google Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter
+file	3	756	791
+
+title	3	Ilya Sutskever\nCofounder of OpenAI\nCo-inventor of ChatGPT
+file	6	484	504
+file	4	485	540
+file	5	84	135
+file	4	36	57
+
+title	3	Sam Altman\nCofounder of OpenAI
+

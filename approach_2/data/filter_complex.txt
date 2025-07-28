@@ -1,17 +1,48 @@
-color=c=black:s=1280x720:r=30:d=6,
+color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Can AI wipe out humanity by 2030?',
 setsar=1,format=yuv420p [v1];
-anullsrc=r=48000:cl=stereo:d=6 [a1];
+anullsrc=r=48000:cl=stereo:d=3 [a1];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis, Cofounder of Google Deepmind, Worlds first major AGI lab',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis\nCofounder of Google Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M',
 setsar=1,format=yuv420p [v2];
 anullsrc=r=48000:cl=stereo:d=3 [a2];
 
-[0:v] trim=start=7089:end=7093,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
-[0:a] atrim=start=7089:end=7093,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
+[0:v] trim=start=7089:end=7094,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
+[0:a] atrim=start=7089:end=7094,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
 
-[0:v] trim=start=7113:end=7125,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
-[0:a] atrim=start=7113:end=7125,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
+[0:v] trim=start=7113:end=7126,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
+[0:a] atrim=start=7113:end=7126,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
 
-[v1][a1][v2][a2][v3][a3][v4][a4]concat=n=4:v=1:a=1[vout][aout]
+[1:v] trim=start=227:end=234,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v5];
+[1:a] atrim=start=227:end=234,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
+
+[2:v] trim=start=1552:end=1586,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v6];
+[2:a] atrim=start=1552:end=1586,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a6];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Shane Legg\nCofounder of Google Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter',
+setsar=1,format=yuv420p [v7];
+anullsrc=r=48000:cl=stereo:d=3 [a7];
+
+[3:v] trim=start=756:end=791,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v8];
+[3:a] atrim=start=756:end=791,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Ilya Sutskever\nCofounder of OpenAI\nCo-inventor of ChatGPT',
+setsar=1,format=yuv420p [v9];
+anullsrc=r=48000:cl=stereo:d=3 [a9];
+
+[6:v] trim=start=484:end=504,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v10];
+[6:a] atrim=start=484:end=504,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a10];
+
+[4:v] trim=start=485:end=540,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
+[4:a] atrim=start=485:end=540,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
+
+[5:v] trim=start=84:end=135,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
+[5:a] atrim=start=84:end=135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
+
+[4:v] trim=start=36:end=57,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v13];
+[4:a] atrim=start=36:end=57,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a13];
+
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13]concat=n=13:v=1:a=1[vout][aout]
