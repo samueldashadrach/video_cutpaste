@@ -1,39 +1,44 @@
 # file indices below are in same order as lines in input_list.txt, but indexed starting from 0 not 1
 
 title	3	Can AI wipe out humanity by 2030?
-title	3	Demis Hassabis\nCofounder of Google Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
+title	3	Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
 
 file	0	7089	7094
 file	0	7113	7126
 file	1	227	234
 
-title	3	Shane Legg\nCofounder of Google Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter
+title	3	Shane Legg\nCofounder of Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter
 file	3	756	790
 
-title	3	Ilya Sutskever\nCofounder of OpenAI\nKey research lead behind ChatGPT
+title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown
 file	6	484	504
 file	4	487	540
 file	5	84	135
 file	4	36	57
 
-title	3	Sam Altman\nCofounder of OpenAI
+title	3	Sam Altman\nCofounder of OpenAI\nNet worth unknown
 file	9	3278	3331
 file	9	3363	3397
 file	10	6093	6135
 file	9	1467	1485
 file	9	4140	4171
 
-title	3	Dario Amodei\nCofounder of Anthropic\nHelped build Claude\nNet worth > $1B
+title	3	Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B
 file	13	5912	5947
 file	11	1682	1732
 file	11	658	707
 file	12	1109	1134
 
-title	3	Elon Musk\nCofounder of xAI\nHelped build Grok\nNet worth > $400B
+title	3	Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B
+file	16	2567	2577
+file	17	167	207
+
 file	14	1181	1205
 file	14	1270	1284
 file	14	1360	1374
 
+file	15	78	135
+file	16	2125	2170
 
 
 
