@@ -1,4 +1,5 @@
 # file indices below are in same order as lines in input_list.txt, but indexed starting from 0 not 1
+# to do - prune some clips further, add hinton, bengio, zuckerberg, maybe hutter? maybe yudkowsky at the end? dont add schmidhuber or sutton in this clip.
 
 title	3	Can AI wipe out humanity by 2030?
 title	3	Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
@@ -10,22 +11,22 @@ file	1	227	234
 title	3	Shane Legg\nCofounder of Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter
 file	3	756	790
 
-title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown
+title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nNow resigned from OpenAI. Cofounder of Safe Superintelligence Inc.
 file	6	484	504
-file	4	487	540
-file	5	84	106
+file	4	492	540
 
 title	3	Sam Altman\nCofounder of OpenAI\nNet worth unknown
-file	9	3278	3331
-file	10	6093	6135
+file	9	3278	3298
+file	9	3310	3331
+file	10	6093	6114
 
 title	3	Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B
 file	13	5912	5947
-file	11	1682	1732
-file	12	1109	1134
+file	11	1682	1724
 
 title	3	Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B
-file	18	244	323
+file	18	244	278
+file	18	292	323
 file	16	2567	2577
-file	17	167	207
+file	17	167	196
 
