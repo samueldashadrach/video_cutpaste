@@ -36,73 +36,46 @@ anullsrc=r=48000:cl=stereo:d=3 [a8];
 [4:v] trim=start=487:end=540,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v10];
 [4:a] atrim=start=487:end=540,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a10];
 
-[5:v] trim=start=84:end=135,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
-[5:a] atrim=start=84:end=135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
-
-[4:v] trim=start=36:end=57,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
-[4:a] atrim=start=36:end=57,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
+[5:v] trim=start=84:end=106,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
+[5:a] atrim=start=84:end=106,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Sam Altman\nCofounder of OpenAI\nNet worth unknown',
-setsar=1,format=yuv420p [v13];
-anullsrc=r=48000:cl=stereo:d=3 [a13];
+setsar=1,format=yuv420p [v12];
+anullsrc=r=48000:cl=stereo:d=3 [a12];
 
-[9:v] trim=start=3278:end=3331,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
-[9:a] atrim=start=3278:end=3331,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
+[9:v] trim=start=3278:end=3331,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v13];
+[9:a] atrim=start=3278:end=3331,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a13];
 
-[9:v] trim=start=3363:end=3397,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v15];
-[9:a] atrim=start=3363:end=3397,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a15];
-
-[10:v] trim=start=6093:end=6135,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v16];
-[10:a] atrim=start=6093:end=6135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a16];
-
-[9:v] trim=start=1467:end=1485,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
-[9:a] atrim=start=1467:end=1485,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
-
-[9:v] trim=start=4140:end=4171,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v18];
-[9:a] atrim=start=4140:end=4171,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a18];
+[10:v] trim=start=6093:end=6135,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
+[10:a] atrim=start=6093:end=6135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B',
-setsar=1,format=yuv420p [v19];
-anullsrc=r=48000:cl=stereo:d=3 [a19];
+setsar=1,format=yuv420p [v15];
+anullsrc=r=48000:cl=stereo:d=3 [a15];
 
-[13:v] trim=start=5912:end=5947,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v20];
-[13:a] atrim=start=5912:end=5947,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a20];
+[13:v] trim=start=5912:end=5947,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v16];
+[13:a] atrim=start=5912:end=5947,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a16];
 
-[11:v] trim=start=1682:end=1732,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
-[11:a] atrim=start=1682:end=1732,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
+[11:v] trim=start=1682:end=1732,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
+[11:a] atrim=start=1682:end=1732,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
 
-[11:v] trim=start=658:end=707,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
-[11:a] atrim=start=658:end=707,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
-
-[12:v] trim=start=1109:end=1134,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v23];
-[12:a] atrim=start=1109:end=1134,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a23];
+[12:v] trim=start=1109:end=1134,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v18];
+[12:a] atrim=start=1109:end=1134,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a18];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B',
-setsar=1,format=yuv420p [v24];
-anullsrc=r=48000:cl=stereo:d=3 [a24];
+setsar=1,format=yuv420p [v19];
+anullsrc=r=48000:cl=stereo:d=3 [a19];
 
-[16:v] trim=start=2567:end=2577,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v25];
-[16:a] atrim=start=2567:end=2577,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a25];
+[18:v] trim=start=244:end=323,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v20];
+[18:a] atrim=start=244:end=323,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a20];
 
-[17:v] trim=start=167:end=207,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v26];
-[17:a] atrim=start=167:end=207,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a26];
+[16:v] trim=start=2567:end=2577,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
+[16:a] atrim=start=2567:end=2577,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
 
-[14:v] trim=start=1181:end=1205,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
-[14:a] atrim=start=1181:end=1205,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
+[17:v] trim=start=167:end=207,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
+[17:a] atrim=start=167:end=207,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
 
-[14:v] trim=start=1270:end=1284,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v28];
-[14:a] atrim=start=1270:end=1284,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a28];
-
-[14:v] trim=start=1360:end=1374,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v29];
-[14:a] atrim=start=1360:end=1374,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a29];
-
-[15:v] trim=start=78:end=135,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v30];
-[15:a] atrim=start=78:end=135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a30];
-
-[16:v] trim=start=2125:end=2170,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v31];
-[16:a] atrim=start=2125:end=2170,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a31];
-
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29][v30][a30][v31][a31]concat=n=31:v=1:a=1[vout][aout]
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22]concat=n=22:v=1:a=1[vout][aout]
