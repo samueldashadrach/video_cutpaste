@@ -8,7 +8,7 @@
 
 # HOW TO RUN
 # 
-# ./filter2video.sh -i data/full_videos/q27XMPm5wg8.mp4 -i data/full_videos/3FIo6evmweo.mp4 -vpre data/libx264.ffpreset -apre data/aac.ffpreset -o data/final_output.mp4 -fc data/filter_complex.txt
+# ./filter2video.sh -il data/input_list.txt -vpre data/libx264.ffpreset -apre data/aac.ffpreset -o data/final_output.mp4 -fc data/filter_complex.txt
 # 
 
 CALL_DIR=$PWD           # directory where *command* was executed
@@ -21,6 +21,7 @@ abspath() {
 
 # Defaults
 inputs=()
+input_list_path=$(abspath "data/input_list.txt")
 output=$(abspath "data/final_output.mp4")
 vpre_path=$(abspath "data/libx264.ffpreset")
 apre_path=$(abspath "data/aac.ffpreset")
@@ -28,7 +29,8 @@ filter_complex_path=$(abspath "data/filter_complex.txt")
 
 while (($#)); do
   case $1 in
-    -i|--input)            inputs+=("$(abspath "$2")");             shift 2 ;;
+    -il|--input_list)     input_list_path="$(abspath "$2")"; shift 2 ;;
+    # -i|--input)            inputs+=("$(abspath "$2")");             shift 2 ;;
     -o|--output)           output="$(abspath "$2")";                shift 2 ;;
     -vpre|--vpre)          vpre_path="$(abspath "$2")";             shift 2 ;;
     -apre|--apre)          apre_path="$(abspath "$2")";             shift 2 ;;
@@ -36,6 +38,12 @@ while (($#)); do
     *)                                                         shift ;;
   esac
 done
+
+while IFS= read -r line || [[ -n "$line" ]]
+do
+  [[ -z "$line" || "${line#\#}" != "$line" ]] && continue # skip empty lines
+  inputs+=("$(abspath "$line")")
+done < "$input_list_path"
 
 mkdir -p "$HOME/.ffmpeg"
 vpre_name="${vpre_path##*/}";  vpre_name="${vpre_name%.ffpreset}"
