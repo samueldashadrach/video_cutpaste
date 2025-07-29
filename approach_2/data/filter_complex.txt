@@ -127,4 +127,7 @@ anullsrc=r=48000:cl=stereo:d=3 [a34];
 [24:v] trim=start=267:end=288,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v35];
 [24:a] atrim=start=267:end=288,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a35];
 
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29][v30][a30][v31][a31][v32][a32][v33][a33][v34][a34][v35][a35]concat=n=35:v=1:a=1[vout][aout]
+[27:v] trim=start=63:end=78,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v36];
+[27:a] atrim=start=63:end=78,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a36];
+
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29][v30][a30][v31][a31][v32][a32][v33][a33][v34][a34][v35][a35][v36][a36]concat=n=36:v=1:a=1[vout][aout]
