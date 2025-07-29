@@ -10,7 +10,7 @@
 #
 #  Proxy parameters:
 #    • original resolution
-#    • 15 fps
+#    • 6 fps
 #    • H.264  (preset ultrafast, CRF 36)
 #    • AAC 64 kbit/s stereo
 #    • original PTS/DTS kept (-copyts)
@@ -34,7 +34,7 @@ abspath() {
 # ----------------------------------------------------------
 input_list_path="data/input_list.txt"
 output_list_path="data/input_list_proxy.txt"
-fps_fixed=15
+fps_fixed=6
 
 # ----------------------------------------------------------
 # parse options
@@ -53,7 +53,7 @@ output_list_path=$(abspath "$output_list_path")
 [[ -r $input_list_path ]] \
   || { echo "Input list '$input_list_path' not found/readable" >&2; exit 1; }
 
-echo "Generating proxies (15 fps, same resolution)…"
+echo "Generating proxies (lowered fps, same resolution)…"
 proxy_paths=()
 
 # ----------------------------------------------------------
