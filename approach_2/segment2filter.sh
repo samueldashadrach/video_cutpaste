@@ -32,7 +32,7 @@ BEGIN { v = 1; a = 1 }
         text     = $3
         for (i = 4; i <= NF; i++) text = text FS $i   # re-join if tabs
 
-        fsize = 72
+        fsize = 48
 
         printf "color=c=black:s=1280x720:r=30:d=%s,\n", duration
         printf "drawtext=fontcolor=white:fontsize=%d:line_spacing=10:", fsize

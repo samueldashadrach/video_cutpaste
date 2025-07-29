@@ -8,7 +8,7 @@ file	18	244	278
 file	18	292	323
 file	16	2567	2577
 
-title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nNow resigned from OpenAI. Cofounder of Safe Superintelligence Inc.
+title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nResigned from OpenAI due to safety concerns
 file	6	484	504
 file	4	497	540
 
@@ -17,7 +17,7 @@ file	9	3278	3292
 file	9	3308	3331
 file	10	6093	6114
 
-title	3	Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B
+title	3	Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees\nNet worth > $1B
 file	13	5912	5947
 file	11	1682	1724
 
@@ -29,7 +29,7 @@ file	0	7089	7094
 file	0	7113	7126
 file	1	227	234
 
-title	3	Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet
+title	3	Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet\nResigned from Google due to safety concerns
 file	20	682	720
 file	21	5052	5066
 file	21	5131	5142
@@ -38,7 +38,7 @@ title	3	Yoshua Bengio\nTuring award winner, Godfather of AI\nWorlds most cited A
 file	22	565	623
 file	23	1078	1091
 
-title	3	Eliezer Yudkowsky\nDecision theorist\nHas been warning about AI-driven extinction for over 20 years
+title	3	Eliezer Yudkowsky\nDecision theorist\nWarning about AI-led extinction since 1990s
 file	26	0	35
 
 title	3	Marcus Hutter\nInventor of AIXI\nShane Leggs PhD Advisor\nSenior researcher, Deepmind
