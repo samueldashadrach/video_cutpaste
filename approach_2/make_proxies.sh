@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-#
+
+# written by o3, one-shot
+# 
 # make_proxies.sh  –  create low-quality preview files
 #
 #  OPTIONS
 #    -il | --input_list   FILE   list of source files (default: data/input_list.txt)
 #    -ol | --output_list  FILE   list to write proxy paths (default: data/input_list_proxy.txt)
-#    -h  | --help
 #
 #  Proxy parameters:
 #    • original resolution
@@ -42,9 +43,6 @@ while (($#)); do
   case $1 in
     -il|--input_list)  input_list_path="$2"; shift 2 ;;
     -ol|--output_list) output_list_path="$2"; shift 2 ;;
-    -h|--help)
-        sed -n '1,/^$/p' "$0" | sed 's/^# \{0,1\}//'
-        exit 0 ;;
     *) echo "Unknown option: $1" >&2; exit 1 ;;
   esac
 done
