@@ -30,7 +30,7 @@ Usage
 
 #### how to search and edit clips fast
 
-1. Use manual search or a search API to find most-upvoted youtube videos on a topic within a given range.
+1. Use manual search or a search API to find most-upvoted youtube videos on a topic within a given date range.
 2. Use yt-dlp to download subtitles for all these videos
 3. Concatenate all the subtitles, take every 50k lines (assuming 1M token context window), pbcopy to clipboard, ask AI to flag timestamps that seem important for a specific query.
 4. Put approx timestamps in above script, try with low-res version of video, if good try with originals.
