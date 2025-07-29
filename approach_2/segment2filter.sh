@@ -7,16 +7,22 @@
 # ./segment2filter.sh < data/segments.tsv > data/filter_complex.txt
 # 
 
-exec 3<&0 # save current stdin (the TSV) on descriptor 3
+exec 3<&0      # save current stdin (the TSV) on descriptor 3
 
-# awk reads the program from heredoc (stdin for awk) and
-# the data from /dev/fd/3 (our copy of the original stdin)
 awk -F'\t' -f - /dev/fd/3 <<'AWK'
-function esc(s) { gsub(/'\''/, "'\\''", s); return s }
+# Escape helper ---------------------------------------------------------------
+#  1. turn the two-character sequence  \n  into an actual <newline>
+#  2. escape single quotes for ffmpeg
+function esc(s) {
+    gsub(/\\n/, "\n", s)           # \n  ->  real newline
+    gsub(/'\''/, "'\\''", s)       # escape single quotes
+    return s
+}
 
 BEGIN { v = 1; a = 1 }
 
-/^[[:space:]]*($|#)/ { next }          # skip blank / comment lines
+# skip blank / comment lines
+/^[[:space:]]*($|#)/ { next }
 
 {
     type = $1

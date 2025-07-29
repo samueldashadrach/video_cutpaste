@@ -4,7 +4,10 @@ setsar=1,format=yuv420p [v1];
 anullsrc=r=48000:cl=stereo:d=3 [a1];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Elon Musk
+Early investor at OpenAI
+Cofounder of xAI, which built Grok
+Net worth > $400B',
 setsar=1,format=yuv420p [v2];
 anullsrc=r=48000:cl=stereo:d=3 [a2];
 
@@ -18,7 +21,12 @@ anullsrc=r=48000:cl=stereo:d=3 [a2];
 [16:a] atrim=start=2567:end=2577,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nNow resigned from OpenAI. Cofounder of Safe Superintelligence Inc.',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Ilya Sutskever
+Cofounder and chief scientist of OpenAI, which built ChatGPT
+OpenAI founded to compete with Deepmind
+Co-inventor of AlexNet along with Geoffrey Hinton
+Net worth unknown
+Now resigned from OpenAI. Cofounder of Safe Superintelligence Inc.',
 setsar=1,format=yuv420p [v6];
 anullsrc=r=48000:cl=stereo:d=3 [a6];
 
@@ -29,7 +37,9 @@ anullsrc=r=48000:cl=stereo:d=3 [a6];
 [4:a] atrim=start=497:end=540,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Sam Altman\nCofounder of OpenAI, Worlds largest AGI company\nNet worth unknown',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Sam Altman
+Cofounder of OpenAI, Worlds largest AGI company
+Net worth unknown',
 setsar=1,format=yuv420p [v9];
 anullsrc=r=48000:cl=stereo:d=3 [a9];
 
@@ -43,7 +53,10 @@ anullsrc=r=48000:cl=stereo:d=3 [a9];
 [10:a] atrim=start=6093:end=6114,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Dario Amodei
+Cofounder of Anthropic, which built Claude
+Founded by ex-OpenAI employees to compete with OpenAI
+Net worth > $1B',
 setsar=1,format=yuv420p [v13];
 anullsrc=r=48000:cl=stereo:d=3 [a13];
 
@@ -54,7 +67,10 @@ anullsrc=r=48000:cl=stereo:d=3 [a13];
 [11:a] atrim=start=1682:end=1724,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a15];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Shane Legg\nCofounder of Deepmind, Worlds first AGI company\nNet worth > $500M\nPhD under Marcus Hutter',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Shane Legg
+Cofounder of Deepmind, Worlds first AGI company
+Net worth > $500M
+PhD under Marcus Hutter',
 setsar=1,format=yuv420p [v16];
 anullsrc=r=48000:cl=stereo:d=3 [a16];
 
@@ -62,7 +78,10 @@ anullsrc=r=48000:cl=stereo:d=3 [a16];
 [3:a] atrim=start=756:end=790,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis
+Cofounder of Deepmind, Worlds first major AGI lab
+Noble Prize winner, PhD
+Net worth >$500M',
 setsar=1,format=yuv420p [v18];
 anullsrc=r=48000:cl=stereo:d=3 [a18];
 
@@ -76,7 +95,9 @@ anullsrc=r=48000:cl=stereo:d=3 [a18];
 [1:a] atrim=start=227:end=234,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Geoffrey Hinton
+Noble Prize winner, Godfather of AI
+Invented AlexNet',
 setsar=1,format=yuv420p [v22];
 anullsrc=r=48000:cl=stereo:d=3 [a22];
 
@@ -90,7 +111,9 @@ anullsrc=r=48000:cl=stereo:d=3 [a22];
 [21:a] atrim=start=5131:end=5142,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a25];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Yoshua Bengio\nTuring award winner, Godfather of AI\nWorlds most cited AI researcher',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Yoshua Bengio
+Turing award winner, Godfather of AI
+Worlds most cited AI researcher',
 setsar=1,format=yuv420p [v26];
 anullsrc=r=48000:cl=stereo:d=3 [a26];
 
@@ -101,7 +124,9 @@ anullsrc=r=48000:cl=stereo:d=3 [a26];
 [23:a] atrim=start=1078:end=1091,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a28];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Eliezer Yudkowsky\nDecision theorist\nHas been warning about AI-driven extinction for over 20 years',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Eliezer Yudkowsky
+Decision theorist
+Has been warning about AI-driven extinction for over 20 years',
 setsar=1,format=yuv420p [v29];
 anullsrc=r=48000:cl=stereo:d=3 [a29];
 
@@ -109,7 +134,10 @@ anullsrc=r=48000:cl=stereo:d=3 [a29];
 [26:a] atrim=start=0:end=35,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a30];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Marcus Hutter\nInventor of AIXI\nShane Leggs PhD Advisor\nSenior researcher, Deepmind',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Marcus Hutter
+Inventor of AIXI
+Shane Leggs PhD Advisor
+Senior researcher, Deepmind',
 setsar=1,format=yuv420p [v31];
 anullsrc=r=48000:cl=stereo:d=3 [a31];
 
@@ -120,7 +148,8 @@ anullsrc=r=48000:cl=stereo:d=3 [a31];
 [25:a] atrim=start=793:end=811,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a33];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Stephen Hawking\nTheoretical physicist',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Stephen Hawking
+Theoretical physicist',
 setsar=1,format=yuv420p [v34];
 anullsrc=r=48000:cl=stereo:d=3 [a34];
 
