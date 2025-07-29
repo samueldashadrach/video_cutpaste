@@ -1,32 +1,49 @@
 # file indices below are in same order as lines in input_list.txt, but indexed starting from 0 not 1
-# to do - prune some clips further, add hinton, bengio, zuckerberg, maybe hutter? maybe yudkowsky at the end? dont add schmidhuber or sutton in this clip.
+# to do - prune some clips further. dont add schmidhuber or sutton in this clip. dont add zuckerberg.
 
 title	3	Can AI wipe out humanity by 2030?
-title	3	Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
 
-file	0	7089	7094
-file	0	7113	7126
-file	1	227	234
-
-title	3	Shane Legg\nCofounder of Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter
-file	3	756	790
+title	3	Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B
+file	18	244	278
+file	18	292	323
+file	16	2567	2577
 
 title	3	Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nNow resigned from OpenAI. Cofounder of Safe Superintelligence Inc.
 file	6	484	504
-file	4	492	540
+file	4	497	540
 
-title	3	Sam Altman\nCofounder of OpenAI\nNet worth unknown
-file	9	3278	3298
-file	9	3310	3331
+title	3	Sam Altman\nCofounder of OpenAI, Worlds largest AGI company\nNet worth unknown
+file	9	3278	3292
+file	9	3308	3331
 file	10	6093	6114
 
 title	3	Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B
 file	13	5912	5947
 file	11	1682	1724
 
-title	3	Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B
-file	18	244	278
-file	18	292	323
-file	16	2567	2577
-file	17	167	196
+title	3	Shane Legg\nCofounder of Deepmind, Worlds first AGI company\nNet worth > $500M\nPhD under Marcus Hutter
+file	3	756	790
 
+title	3	Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M
+file	0	7089	7094
+file	0	7113	7126
+file	1	227	234
+
+title	3	Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet
+file	20	682	720
+file	21	5052	5066
+file	21	5131	5142
+
+title	3	Yoshua Bengio\nTuring award winner, Godfather of AI\nWorlds most cited AI researcher
+file	22	565	623
+file	23	1078	1091
+
+title	3	Eliezer Yudkowsky\nDecision theorist\nHas been warning about AI-driven extinction for over 20 years
+file	26	0	35
+
+title	3	Marcus Hutter\nInventor of AIXI\nShane Leggs PhD Advisor\nSenior researcher, Deepmind
+file	25	684	733
+file	25	793	811
+
+title	3	Stephen Hawking\nTheoretical physicist
+file	24	267	288

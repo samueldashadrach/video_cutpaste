@@ -4,78 +4,127 @@ setsar=1,format=yuv420p [v1];
 anullsrc=r=48000:cl=stereo:d=3 [a1];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B',
 setsar=1,format=yuv420p [v2];
 anullsrc=r=48000:cl=stereo:d=3 [a2];
 
-[0:v] trim=start=7089:end=7094,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
-[0:a] atrim=start=7089:end=7094,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
+[18:v] trim=start=244:end=278,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
+[18:a] atrim=start=244:end=278,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
 
-[0:v] trim=start=7113:end=7126,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
-[0:a] atrim=start=7113:end=7126,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
+[18:v] trim=start=292:end=323,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
+[18:a] atrim=start=292:end=323,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
 
-[1:v] trim=start=227:end=234,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v5];
-[1:a] atrim=start=227:end=234,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
-
-color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Shane Legg\nCofounder of Deepmind, Worlds first major AGI lab\nNet worth > $500M\nPhD under Marcus Hutter',
-setsar=1,format=yuv420p [v6];
-anullsrc=r=48000:cl=stereo:d=3 [a6];
-
-[3:v] trim=start=756:end=790,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v7];
-[3:a] atrim=start=756:end=790,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a7];
+[16:v] trim=start=2567:end=2577,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v5];
+[16:a] atrim=start=2567:end=2577,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Ilya Sutskever\nCofounder and chief scientist of OpenAI, which built ChatGPT\nOpenAI founded to compete with Deepmind\nCo-inventor of AlexNet along with Geoffrey Hinton\nNet worth unknown\nNow resigned from OpenAI. Cofounder of Safe Superintelligence Inc.',
-setsar=1,format=yuv420p [v8];
-anullsrc=r=48000:cl=stereo:d=3 [a8];
+setsar=1,format=yuv420p [v6];
+anullsrc=r=48000:cl=stereo:d=3 [a6];
 
-[6:v] trim=start=484:end=504,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v9];
-[6:a] atrim=start=484:end=504,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a9];
+[6:v] trim=start=484:end=504,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v7];
+[6:a] atrim=start=484:end=504,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a7];
 
-[4:v] trim=start=492:end=540,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v10];
-[4:a] atrim=start=492:end=540,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a10];
+[4:v] trim=start=497:end=540,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v8];
+[4:a] atrim=start=497:end=540,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Sam Altman\nCofounder of OpenAI\nNet worth unknown',
-setsar=1,format=yuv420p [v11];
-anullsrc=r=48000:cl=stereo:d=3 [a11];
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Sam Altman\nCofounder of OpenAI, Worlds largest AGI company\nNet worth unknown',
+setsar=1,format=yuv420p [v9];
+anullsrc=r=48000:cl=stereo:d=3 [a9];
 
-[9:v] trim=start=3278:end=3298,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
-[9:a] atrim=start=3278:end=3298,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
+[9:v] trim=start=3278:end=3292,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v10];
+[9:a] atrim=start=3278:end=3292,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a10];
 
-[9:v] trim=start=3310:end=3331,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v13];
-[9:a] atrim=start=3310:end=3331,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a13];
+[9:v] trim=start=3308:end=3331,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
+[9:a] atrim=start=3308:end=3331,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
 
-[10:v] trim=start=6093:end=6114,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
-[10:a] atrim=start=6093:end=6114,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
+[10:v] trim=start=6093:end=6114,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
+[10:a] atrim=start=6093:end=6114,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Dario Amodei\nCofounder of Anthropic, which built Claude\nFounded by ex-OpenAI employees to compete with OpenAI\nNet worth > $1B',
-setsar=1,format=yuv420p [v15];
-anullsrc=r=48000:cl=stereo:d=3 [a15];
+setsar=1,format=yuv420p [v13];
+anullsrc=r=48000:cl=stereo:d=3 [a13];
 
-[13:v] trim=start=5912:end=5947,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v16];
-[13:a] atrim=start=5912:end=5947,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a16];
+[13:v] trim=start=5912:end=5947,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
+[13:a] atrim=start=5912:end=5947,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
 
-[11:v] trim=start=1682:end=1724,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
-[11:a] atrim=start=1682:end=1724,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
+[11:v] trim=start=1682:end=1724,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v15];
+[11:a] atrim=start=1682:end=1724,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a15];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Elon Musk\nEarly investor at OpenAI\nCofounder of xAI, which built Grok\nNet worth > $400B',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Shane Legg\nCofounder of Deepmind, Worlds first AGI company\nNet worth > $500M\nPhD under Marcus Hutter',
+setsar=1,format=yuv420p [v16];
+anullsrc=r=48000:cl=stereo:d=3 [a16];
+
+[3:v] trim=start=756:end=790,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
+[3:a] atrim=start=756:end=790,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Demis Hassabis\nCofounder of Deepmind, Worlds first major AGI lab\nNoble Prize winner, PhD\nNet worth >$500M',
 setsar=1,format=yuv420p [v18];
 anullsrc=r=48000:cl=stereo:d=3 [a18];
 
-[18:v] trim=start=244:end=278,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v19];
-[18:a] atrim=start=244:end=278,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a19];
+[0:v] trim=start=7089:end=7094,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v19];
+[0:a] atrim=start=7089:end=7094,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a19];
 
-[18:v] trim=start=292:end=323,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v20];
-[18:a] atrim=start=292:end=323,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a20];
+[0:v] trim=start=7113:end=7126,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v20];
+[0:a] atrim=start=7113:end=7126,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a20];
 
-[16:v] trim=start=2567:end=2577,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
-[16:a] atrim=start=2567:end=2577,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
+[1:v] trim=start=227:end=234,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
+[1:a] atrim=start=227:end=234,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
 
-[17:v] trim=start=167:end=196,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
-[17:a] atrim=start=167:end=196,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Geoffrey Hinton\nNoble Prize winner, Godfather of AI\nInvented AlexNet',
+setsar=1,format=yuv420p [v22];
+anullsrc=r=48000:cl=stereo:d=3 [a22];
 
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22]concat=n=22:v=1:a=1[vout][aout]
+[20:v] trim=start=682:end=720,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v23];
+[20:a] atrim=start=682:end=720,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a23];
+
+[21:v] trim=start=5052:end=5066,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v24];
+[21:a] atrim=start=5052:end=5066,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a24];
+
+[21:v] trim=start=5131:end=5142,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v25];
+[21:a] atrim=start=5131:end=5142,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a25];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Yoshua Bengio\nTuring award winner, Godfather of AI\nWorlds most cited AI researcher',
+setsar=1,format=yuv420p [v26];
+anullsrc=r=48000:cl=stereo:d=3 [a26];
+
+[22:v] trim=start=565:end=623,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
+[22:a] atrim=start=565:end=623,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
+
+[23:v] trim=start=1078:end=1091,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v28];
+[23:a] atrim=start=1078:end=1091,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a28];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Eliezer Yudkowsky\nDecision theorist\nHas been warning about AI-driven extinction for over 20 years',
+setsar=1,format=yuv420p [v29];
+anullsrc=r=48000:cl=stereo:d=3 [a29];
+
+[26:v] trim=start=0:end=35,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v30];
+[26:a] atrim=start=0:end=35,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a30];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Marcus Hutter\nInventor of AIXI\nShane Leggs PhD Advisor\nSenior researcher, Deepmind',
+setsar=1,format=yuv420p [v31];
+anullsrc=r=48000:cl=stereo:d=3 [a31];
+
+[25:v] trim=start=684:end=733,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v32];
+[25:a] atrim=start=684:end=733,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a32];
+
+[25:v] trim=start=793:end=811,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v33];
+[25:a] atrim=start=793:end=811,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a33];
+
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Stephen Hawking\nTheoretical physicist',
+setsar=1,format=yuv420p [v34];
+anullsrc=r=48000:cl=stereo:d=3 [a34];
+
+[24:v] trim=start=267:end=288,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v35];
+[24:a] atrim=start=267:end=288,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a35];
+
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29][v30][a30][v31][a31][v32][a32][v33][a33][v34][a34][v35][a35]concat=n=35:v=1:a=1[vout][aout]
