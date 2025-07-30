@@ -51,8 +51,8 @@ drawtext=fontcolor=white:fontsize=180:line_spacing=10:x=(w-text_w)/2:y=(h-text_h
 setsar=1,format=yuv420p [v13];
 anullsrc=r=48000:cl=stereo:d=0.5 [a13];
 
-[3:v] trim=start=1719:end=11203.3,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
-[3:a] atrim=start=1719:end=11203.3,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
+[3:v] trim=start=1719:end=1723.3,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
+[3:a] atrim=start=1719:end=1723.3,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
 
 color=c=black:s=1280x720:r=30:d=0.5,
 drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Nobel Prize winner',
