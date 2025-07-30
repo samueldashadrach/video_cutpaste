@@ -29,10 +29,9 @@ BEGIN { v = 1; a = 1 }
 
     if (type == "title") {                         # ----- slide -----
         duration = $2
-        text     = $3
-        for (i = 4; i <= NF; i++) text = text FS $i   # re-join if tabs
-
-        fsize = 48
+        fsize    = $3
+        text     = $4
+        for (i = 5; i <= NF; i++) text = text FS $i   # re-join if tabs
 
         printf "color=c=black:s=1280x720:r=30:d=%s,\n", duration
         printf "drawtext=fontcolor=white:fontsize=%d:line_spacing=10:", fsize

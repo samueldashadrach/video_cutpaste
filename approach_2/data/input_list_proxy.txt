@@ -1,7 +1,0 @@
-data/full_videos/.proxy_a2ZBEC16yH4.mp4
-data/full_videos/.proxy_SEkGLj0bwAU.mp4
-data/full_videos/.proxy_L_Guz73e6fw.mp4
-data/full_videos/.proxy_esCSpbDPJik.mp4
-data/full_videos/.proxy_-HzgcbRXUK8.mp4
-data/full_videos/.proxy_giT0ytynSqg.mp4
-data/full_videos/.proxy_qe9QSCF-d88.mp4

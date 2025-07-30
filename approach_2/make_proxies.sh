@@ -6,7 +6,6 @@
 #
 #  OPTIONS
 #    -il | --input_list   FILE   list of source files (default: data/input_list.txt)
-#    -ol | --output_list  FILE   list to write proxy paths (default: data/input_list_proxy.txt)
 #
 #  Proxy parameters:
 #    • original resolution
@@ -33,7 +32,6 @@ abspath() {
 # defaults
 # ----------------------------------------------------------
 input_list_path="data/input_list.txt"
-output_list_path="data/input_list_proxy.txt"
 fps_fixed=6
 
 # ----------------------------------------------------------
@@ -42,13 +40,11 @@ fps_fixed=6
 while (($#)); do
   case $1 in
     -il|--input_list)  input_list_path="$2"; shift 2 ;;
-    -ol|--output_list) output_list_path="$2"; shift 2 ;;
     *) echo "Unknown option: $1" >&2; exit 1 ;;
   esac
 done
 
 input_list_path=$(abspath "$input_list_path")
-output_list_path=$(abspath "$output_list_path")
 
 [[ -r $input_list_path ]] \
   || { echo "Input list '$input_list_path' not found/readable" >&2; exit 1; }
@@ -68,7 +64,7 @@ while IFS= read -r line || [[ -n $line ]]; do
 
   dir=$(dirname  "$src")
   base=$(basename "$src")
-  proxy="${dir}/.proxy_${base%.*}.mp4"
+  proxy="${dir}/.proxy.${base%.*}.mp4"
   proxy_paths+=("$proxy")
 
   if [[ -f $proxy ]]; then
@@ -86,9 +82,4 @@ while IFS= read -r line || [[ -n $line ]]; do
          "$proxy"
 done < "$input_list_path"
 
-# ----------------------------------------------------------
-# write list of proxies
-# ----------------------------------------------------------
-printf '%s\n' "${proxy_paths[@]}" > "$output_list_path"
-echo "Proxy list written to $output_list_path"
 echo "Done."
