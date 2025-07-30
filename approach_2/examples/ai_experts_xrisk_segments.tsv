@@ -1,5 +1,5 @@
 # file indices below are in same order as lines in input_list.txt, but indexed starting from 0 not 1
-# to do - prune some clips further. dont add schmidhuber or sutton in this clip. dont add zuckerberg.
+# decision - didnt add schmidhuber, sutton, zuckerberg in this clip.
 
 title	3	Can AI wipe out humanity by 2030?
 

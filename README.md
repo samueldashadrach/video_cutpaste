@@ -1,8 +1,10 @@
-2025-07-29
+2025-07-30
 
 # README
 
 Download videos from youtube, cut chunks based on time intervals provided, normalise loudness, add title slides, combine into a single video. Uses yt-dlp for downloading youtube videos, uses ffmpeg for all video editing purposes.
+
+**I am aware the docs are not good and this script is not easy to use. Work in progress.**
 
 #### approach 1
 
