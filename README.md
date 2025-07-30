@@ -37,3 +37,13 @@ Usage
 3. Concatenate all the subtitles, take every 50k lines (assuming 1M token context window), pbcopy to clipboard, ask AI to flag timestamps that seem important for a specific query.
 4. Put approx timestamps in above script, try with low-res version of video, if good try with originals.
 
+#### how to convert horizontal 16:9 to vertical 9:16
+
+ - jugaad - first crop to output 1:1, then add black bars to output 9:16
+```
+ffmpeg -i data/final_output.mp4 -vf "crop=ih:ih,pad=iw:iw*16/9:(ow-iw)/2:(oh-ih)/2:black" -c:v libx264 -crf 22 -preset fast -c:a copy data/final_output_9x16.mp4
+```
+ - alternatively, crop to 9:16 directly
+ - adding black bars with no cropping is usually bad idea
+ - crop individual clips by modifying ffmpeg complex_filter_script if you have more time
+

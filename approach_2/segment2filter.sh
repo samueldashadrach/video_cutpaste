@@ -30,8 +30,8 @@ BEGIN { v = 1; a = 1 }
     if (type == "title") {                         # ----- slide -----
         duration = $2
         fsize    = $3
-        text     = $4
-        for (i = 5; i <= NF; i++) text = text FS $i   # re-join if tabs
+        text     = ""
+        for (i = 4; i <= NF; i++) text = text FS $i   # re-join if tabs
 
         printf "color=c=black:s=1280x720:r=30:d=%s,\n", duration
         printf "drawtext=fontcolor=white:fontsize=%d:line_spacing=10:", fsize
@@ -43,15 +43,16 @@ BEGIN { v = 1; a = 1 }
         idx   = $2
         start = $3
         stop  = $4
+        speed = (NF < 5 || $5 == "") ? 1.0 : $5
 
         printf "[%s:v] trim=start=%s:end=%s,"\
-               "setpts=PTS-STARTPTS,fps=30,scale=1280:-2,"\
-               "setsar=1,format=yuv420p [v%d];\n", idx, start, stop, v
+               "setpts=(PTS-STARTPTS)/%s,fps=30,scale=1280:-2,"\
+               "setsar=1,format=yuv420p [v%d];\n", idx, start, stop, speed, v
 
         printf "[%s:a] atrim=start=%s:end=%s,"\
-               "asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,"\
+               "asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=%s,"\
                "aformat=sample_fmts=fltp:channel_layouts=stereo:"\
-               "sample_rates=48000 [a%d];\n\n", idx, start, stop, a
+               "sample_rates=48000 [a%d];\n\n", idx, start, stop, speed, a
     }
     else {
         printf "### unknown row-type \"%s\" – line skipped ###\n", type > "/dev/stderr"

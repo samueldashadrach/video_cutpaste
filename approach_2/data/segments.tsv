@@ -1,39 +1,36 @@
 # file indices below are in same order as lines in input_list.txt, but indexed starting from 0 not 1
 
-title	2	96	Can AI kill\neveryone by 2030?
+title	1	120	Can AI kill\neveryone by 2030?
 
 # elon
-title	0.5	120	xAI
-file	0	296.5	305.5
-file	0	274.2	278
+title	0.3	180	xAI
+file	0	296.5	305.5	1.0
+file	0	274.2	278	1.0
 
 # ilya
-title	0.5	120	OpenAI
-file	1	484	497
+title	0.3	180	OpenAI
+file	1	484	497	1.4
 
 # sama
-title	0.5	120	OpenAI
-file	2	3286	3292
-file	2	3313	3318.8
-
-# amodei
-title	0.5	120	Anthropic
-file	3	1685	1693
-file	3	1719	1723.3
+title	0.3	180	OpenAI
+file	2	3286	3292	1.4
+file	2	3313	3318.8	1.3
 
 # hassabis
-title	0.5	120	DeepMind\nNoble Prize winner
-file	4	7089.5	7094
-file	4	7113	7118.2
+title	0.5	120	DeepMind\nNobel Prize winner
+file	4	7089.5	7094	1.5
+file	4	7113	7118.2	1.5
+
+# amodei
+title	0.5	180	Anthropic
+# file	3	1685	1693	1.4
+file	3	1719	11203.3	1.4
 
 # hinton
-title	0.5	120	Noble Prize winner
-file	5	5060	5066.5
-file	5	5131	5142
+title	0.5	120	Nobel Prize winner
+file	5	5060	5066.5	1.4
+file	5	5131	5142	1.6
 
 # bengio
 title	0.5	120	Worlds Most cited\nAI researcher
-# file	6	594	606
-file	7	1085	1091
-
-
+file	7	1085	1090.7	1.4

@@ -1,80 +1,77 @@
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=96:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Can AI kill
+color=c=black:s=1280x720:r=30:d=1,
+drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Can AI kill
 everyone by 2030?',
 setsar=1,format=yuv420p [v1];
-anullsrc=r=48000:cl=stereo:d=2 [a1];
+anullsrc=r=48000:cl=stereo:d=1 [a1];
 
-color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='xAI',
+color=c=black:s=1280x720:r=30:d=0.3,
+drawtext=fontcolor=white:fontsize=180:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	xAI',
 setsar=1,format=yuv420p [v2];
-anullsrc=r=48000:cl=stereo:d=0.5 [a2];
+anullsrc=r=48000:cl=stereo:d=0.3 [a2];
 
-[0:v] trim=start=296.5:end=305.5,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
-[0:a] atrim=start=296.5:end=305.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
+[0:v] trim=start=296.5:end=305.5,setpts=(PTS-STARTPTS)/1.0,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
+[0:a] atrim=start=296.5:end=305.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.0,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
 
-[0:v] trim=start=274.2:end=278,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
-[0:a] atrim=start=274.2:end=278,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
+[0:v] trim=start=274.2:end=278,setpts=(PTS-STARTPTS)/1.0,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
+[0:a] atrim=start=274.2:end=278,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.0,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
 
-color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='OpenAI',
+color=c=black:s=1280x720:r=30:d=0.3,
+drawtext=fontcolor=white:fontsize=180:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	OpenAI',
 setsar=1,format=yuv420p [v5];
-anullsrc=r=48000:cl=stereo:d=0.5 [a5];
+anullsrc=r=48000:cl=stereo:d=0.3 [a5];
 
-[1:v] trim=start=484:end=497,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v6];
-[1:a] atrim=start=484:end=497,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a6];
+[1:v] trim=start=484:end=497,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v6];
+[1:a] atrim=start=484:end=497,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a6];
 
-color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='OpenAI',
+color=c=black:s=1280x720:r=30:d=0.3,
+drawtext=fontcolor=white:fontsize=180:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	OpenAI',
 setsar=1,format=yuv420p [v7];
-anullsrc=r=48000:cl=stereo:d=0.5 [a7];
+anullsrc=r=48000:cl=stereo:d=0.3 [a7];
 
-[2:v] trim=start=3286:end=3292,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v8];
-[2:a] atrim=start=3286:end=3292,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
+[2:v] trim=start=3286:end=3292,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v8];
+[2:a] atrim=start=3286:end=3292,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
 
-[2:v] trim=start=3313:end=3318.8,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v9];
-[2:a] atrim=start=3313:end=3318.8,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a9];
+[2:v] trim=start=3313:end=3318.8,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v9];
+[2:a] atrim=start=3313:end=3318.8,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a9];
 
 color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Anthropic',
+drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	DeepMind
+Nobel Prize winner',
 setsar=1,format=yuv420p [v10];
 anullsrc=r=48000:cl=stereo:d=0.5 [a10];
 
-[3:v] trim=start=1685:end=1693,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
-[3:a] atrim=start=1685:end=1693,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
+[4:v] trim=start=7089.5:end=7094,setpts=(PTS-STARTPTS)/1.5,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
+[4:a] atrim=start=7089.5:end=7094,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
 
-[3:v] trim=start=1719:end=1723.3,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
-[3:a] atrim=start=1719:end=1723.3,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
+[4:v] trim=start=7113:end=7118.2,setpts=(PTS-STARTPTS)/1.5,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
+[4:a] atrim=start=7113:end=7118.2,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
 
 color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='DeepMind
-Noble Prize winner',
+drawtext=fontcolor=white:fontsize=180:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Anthropic',
 setsar=1,format=yuv420p [v13];
 anullsrc=r=48000:cl=stereo:d=0.5 [a13];
 
-[4:v] trim=start=7089.5:end=7094,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
-[4:a] atrim=start=7089.5:end=7094,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
-
-[4:v] trim=start=7113:end=7118.2,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v15];
-[4:a] atrim=start=7113:end=7118.2,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a15];
+[3:v] trim=start=1719:end=11203.3,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v14];
+[3:a] atrim=start=1719:end=11203.3,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a14];
 
 color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Noble Prize winner',
-setsar=1,format=yuv420p [v16];
-anullsrc=r=48000:cl=stereo:d=0.5 [a16];
+drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Nobel Prize winner',
+setsar=1,format=yuv420p [v15];
+anullsrc=r=48000:cl=stereo:d=0.5 [a15];
 
-[5:v] trim=start=5060:end=5066.5,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
-[5:a] atrim=start=5060:end=5066.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
+[5:v] trim=start=5060:end=5066.5,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v16];
+[5:a] atrim=start=5060:end=5066.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a16];
 
-[5:v] trim=start=5131:end=5142,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v18];
-[5:a] atrim=start=5131:end=5142,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a18];
+[5:v] trim=start=5131:end=5142,setpts=(PTS-STARTPTS)/1.6,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
+[5:a] atrim=start=5131:end=5142,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.6,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
 
 color=c=black:s=1280x720:r=30:d=0.5,
-drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='Worlds Most cited
+drawtext=fontcolor=white:fontsize=120:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Worlds Most cited
 AI researcher',
-setsar=1,format=yuv420p [v19];
-anullsrc=r=48000:cl=stereo:d=0.5 [a19];
+setsar=1,format=yuv420p [v18];
+anullsrc=r=48000:cl=stereo:d=0.5 [a18];
 
-[7:v] trim=start=1085:end=1091,setpts=PTS-STARTPTS,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v20];
-[7:a] atrim=start=1085:end=1091,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a20];
+[7:v] trim=start=1085:end=1090.7,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v19];
+[7:a] atrim=start=1085:end=1090.7,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a19];
 
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20]concat=n=20:v=1:a=1[vout][aout]
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19]concat=n=19:v=1:a=1[vout][aout]
