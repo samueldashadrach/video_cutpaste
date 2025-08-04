@@ -1,10 +1,19 @@
 color=c=black:s=1280x720:r=30:d=10,
-drawtext=fontcolor=white:fontsize=0:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='',
+drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Jurgen Schmidhuber
+Director of Swiss AI lab IDSIA for 25 years
+
+Sepp Hochreiter invented LSTM along with Schmidhuber
+Marcus Hutter invented AIXI @ IDSIA
+Shane Legg completed PhD thesis under Marcus Hutter @ IDSIA
+
+Shane Legg became Co-founder @ DeepMind
+Sepp Hochreiter hired as 1st employee @ DeepMind
+Marcus Hutter hired as senior researcher @ DeepMind',
 setsar=1,format=yuv420p [v1];
 anullsrc=r=48000:cl=stereo:d=10 [a1];
 
 color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=0:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI goals are not human goals',
 setsar=1,format=yuv420p [v2];
 anullsrc=r=48000:cl=stereo:d=2 [a2];
 
@@ -15,7 +24,7 @@ anullsrc=r=48000:cl=stereo:d=2 [a2];
 [0:a] atrim=start=2548:end=2564,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
 
 color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=0:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will automate science',
 setsar=1,format=yuv420p [v5];
 anullsrc=r=48000:cl=stereo:d=2 [a5];
 
@@ -23,7 +32,7 @@ anullsrc=r=48000:cl=stereo:d=2 [a5];
 [1:a] atrim=start=72:end=106,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a6];
 
 color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=0:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will colonise the galaxies',
 setsar=1,format=yuv420p [v7];
 anullsrc=r=48000:cl=stereo:d=2 [a7];
 
@@ -31,7 +40,7 @@ anullsrc=r=48000:cl=stereo:d=2 [a7];
 [1:a] atrim=start=4363:end=4379,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
 
 color=c=black:s=1280x720:r=30:d=1,
-drawtext=fontcolor=white:fontsize=0:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	(They refers to AI here)',
 setsar=1,format=yuv420p [v9];
 anullsrc=r=48000:cl=stereo:d=1 [a9];
 
