@@ -1,6 +1,5 @@
 color=c=black:s=1280x720:r=30:d=5,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	The Extinctionists
-People who want AI to cause human extinction',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	People who want AI to take over the world (and are silent about whether they support human extinction)',
 setsar=1,format=yuv420p [v1];
 anullsrc=r=48000:cl=stereo:d=5 [a1];
 
@@ -24,7 +23,7 @@ setsar=1,format=yuv420p [v3];
 anullsrc=r=48000:cl=stereo:d=10 [a3];
 
 color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI goals are not human goals',
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Schmidhuber - AI goals are not human goals',
 setsar=1,format=yuv420p [v4];
 anullsrc=r=48000:cl=stereo:d=2 [a4];
 
