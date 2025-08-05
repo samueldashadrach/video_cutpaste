@@ -96,44 +96,53 @@ anullsrc=r=48000:cl=stereo:d=3 [a18];
 [3:v] trim=start=2760:end=2788,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v19];
 [3:a] atrim=start=2760:end=2788,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a19];
 
-color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	I want to augment my mind',
+color=c=black:s=1280x720:r=30:d=2,
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	I want to upload my brain into a computer',
 setsar=1,format=yuv420p [v20];
-anullsrc=r=48000:cl=stereo:d=3 [a20];
+anullsrc=r=48000:cl=stereo:d=2 [a20];
 
 [3:v] trim=start=2442:end=2473,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
 [3:a] atrim=start=2442:end=2473,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
 
+[5:v] trim=start=1677:end=1701,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
+[5:a] atrim=start=1677:end=1701,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
+
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Decentralised group of agents
-will win the competition',
-setsar=1,format=yuv420p [v22];
-anullsrc=r=48000:cl=stereo:d=3 [a22];
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Decentralised group of digital minds
+will outcompete paperclip maximisers',
+setsar=1,format=yuv420p [v23];
+anullsrc=r=48000:cl=stereo:d=3 [a23];
 
-[3:v] trim=start=1453:end=1478,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v23];
-[3:a] atrim=start=1453:end=1478,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a23];
+[3:v] trim=start=1453:end=1478,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v24];
+[3:a] atrim=start=1453:end=1478,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a24];
 
-color=c=black:s=1280x720:r=30:d=5,
+color=c=black:s=1280x720:r=30:d=6,
 drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Conclusion
 
 Sutton wants to use an AI that doesnt care about him
- to upload himself into a computer
+ to upload his brain into a computer
 And outcompete other paperclip-maximising AIs
  that want him dead
 
-Am I getting this right?',
-setsar=1,format=yuv420p [v24];
-anullsrc=r=48000:cl=stereo:d=5 [a24];
+Am I getting this right???',
+setsar=1,format=yuv420p [v25];
+anullsrc=r=48000:cl=stereo:d=6 [a25];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	This is why no one should regulate AI',
-setsar=1,format=yuv420p [v25];
-anullsrc=r=48000:cl=stereo:d=3 [a25];
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Sutton - I dont understand anyone
+who thinks this could go badly',
+setsar=1,format=yuv420p [v26];
+anullsrc=r=48000:cl=stereo:d=3 [a26];
 
-[3:v] trim=start=1820:end=1828,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v26];
-[3:a] atrim=start=1820:end=1828,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a26];
+[4:v] trim=start=3140:end=3179,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
+[4:a] atrim=start=3140:end=3179,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
 
-[3:v] trim=start=1840:end=1858,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
-[3:a] atrim=start=1840:end=1858,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
+color=c=black:s=1280x720:r=30:d=3,
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	25 percent probability of this by 2030',
+setsar=1,format=yuv420p [v28];
+anullsrc=r=48000:cl=stereo:d=3 [a28];
 
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27]concat=n=27:v=1:a=1[vout][aout]
+[5:v] trim=start=1525:end=1532,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v29];
+[5:a] atrim=start=1525:end=1532,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a29];
+
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29]concat=n=29:v=1:a=1[vout][aout]
