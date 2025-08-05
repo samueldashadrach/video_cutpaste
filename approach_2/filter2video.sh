@@ -77,6 +77,6 @@ cmd+=(
 )
 
 echo "started at: $(date)"
-echo "${cmd[@]}" # for debugging only
+# echo "${cmd[@]}" # for debugging only
 "${cmd[@]}"
 echo "completed at: $(date)"

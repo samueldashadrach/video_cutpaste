@@ -27,7 +27,7 @@ Usage
  - Use `download.sh` with appropriate args to download youtube videos.
  - Configure `data/input_list.txt` and `data/segments.tsv`. (Make sure locations are all correct.)
  - (Optional) Use `make_proxies.sh` with approprite args to generate lower res versions of all videos specified in input_list.txt
- - Use `segment2filter.sh` with appropriate stdin and stdout to convert input_list into a ffmpeg complex_filter_script `data/filter_coplex.txt`.
+ - Use `segment2filter.sh` with appropriate stdin and stdout to convert input_list into a ffmpeg complex_filter_script `data/filter_complex.txt`.
  - Use `filter2video.sh` to do the heavy-lifting. Reads `data/input_list.txt`, `data/segments.tsv` to find downloaded videos, decode them, and process them as per script `data/filter_complex.txt`. (Optional) Use `data/input_list_proxy.txt` to point to lower res versions of videos, in order to save time.
 
 ```
