@@ -2,14 +2,12 @@
 
 # written by o3, successfully tested
 
-# TO DO: (maybe unsolveable) figure out how to reduce time taken by script.
-# currently this script decodes entire 2 hours videos.
-# decoding only certain chunks means abandoning the filter script based approach.
-
 # HOW TO RUN
 # 
+# # Use original videos
 # ./filter2video.sh -il data/input_list.txt -vpre data/libx264.ffpreset -apre data/aac.ffpreset -o data/final_output.mp4 -fc data/filter_complex.txt
-# 
+# # Use proxy videos
+# ./filter2video.sh -p -il data/input_list.txt -vpre data/libx264.ffpreset -apre data/aac.ffpreset -o data/final_output.mp4 -fc data/filter_complex.txt
 
 CALL_DIR=$PWD           # directory where *command* was executed
 abspath() {
@@ -26,23 +24,33 @@ output=$(abspath "data/final_output.mp4")
 vpre_path=$(abspath "data/libx264.ffpreset")
 apre_path=$(abspath "data/aac.ffpreset")
 filter_complex_path=$(abspath "data/filter_complex.txt")
+use_proxy=false
 
 while (($#)); do
   case $1 in
-    -il|--input_list)     input_list_path="$(abspath "$2")"; shift 2 ;;
-    # -i|--input)            inputs+=("$(abspath "$2")");             shift 2 ;;
-    -o|--output)           output="$(abspath "$2")";                shift 2 ;;
-    -vpre|--vpre)          vpre_path="$(abspath "$2")";             shift 2 ;;
-    -apre|--apre)          apre_path="$(abspath "$2")";             shift 2 ;;
-    -fc|--filter_complex)  filter_complex_path="$(abspath "$2")";   shift 2 ;;
-    *)                                                         shift ;;
+    -p|--proxy)            use_proxy=true;                         shift   ;;
+    -il|--input_list)      input_list_path="$(abspath "$2")";      shift 2 ;;
+    -o|--output)           output="$(abspath "$2")";               shift 2 ;;
+    -vpre|--vpre)          vpre_path="$(abspath "$2")";            shift 2 ;;
+    -apre|--apre)          apre_path="$(abspath "$2")";            shift 2 ;;
+    -fc|--filter_complex)  filter_complex_path="$(abspath "$2")";  shift 2 ;;
+    *)                                                         shift       ;;
   esac
 done
 
+
 while IFS= read -r line || [[ -n "$line" ]]
 do
-  [[ -z "$line" || "${line#\#}" != "$line" ]] && continue # skip empty lines
-  inputs+=("$(abspath "$line")")
+  [[ -z "$line" || "${line#\#}" != "$line" ]] && continue   # skip blanks / comments
+  abs=$(abspath "$line")
+
+  if $use_proxy; then
+    dir=$(dirname  "$abs")
+    base=$(basename "$abs")
+    abs="${dir}/.proxy.${base}"
+  fi
+
+  inputs+=("$abs")
 done < "$input_list_path"
 
 mkdir -p "$HOME/.ffmpeg"
@@ -69,6 +77,6 @@ cmd+=(
 )
 
 echo "started at: $(date)"
-# echo "${cmd[@]}" # for debugging only
+echo "${cmd[@]}" # for debugging only
 "${cmd[@]}"
 echo "completed at: $(date)"
