@@ -1,5 +1,5 @@
 color=c=black:s=1280x720:r=30:d=5,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	People who want AI to take over the world
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	People who want AI to take over Earth
 
 (and are silent about whether they accept
  human extinction as a result)',
@@ -101,11 +101,11 @@ drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)
 setsar=1,format=yuv420p [v20];
 anullsrc=r=48000:cl=stereo:d=2 [a20];
 
-[3:v] trim=start=2442:end=2473,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
-[3:a] atrim=start=2442:end=2473,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
+[5:v] trim=start=1677:end=1701,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
+[5:a] atrim=start=1677:end=1701,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
 
-[5:v] trim=start=1677:end=1701,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
-[5:a] atrim=start=1677:end=1701,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
+[3:v] trim=start=2442:end=2473,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
+[3:a] atrim=start=2442:end=2473,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Decentralised group of digital minds
@@ -134,8 +134,8 @@ who thinks this could go badly',
 setsar=1,format=yuv420p [v26];
 anullsrc=r=48000:cl=stereo:d=3 [a26];
 
-[4:v] trim=start=3140:end=3179,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
-[4:a] atrim=start=3140:end=3179,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
+[4:v] trim=start=3140:end=3180,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
+[4:a] atrim=start=3140:end=3180,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
 
 color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	25 percent probability of this by 2030',
