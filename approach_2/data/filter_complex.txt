@@ -1,148 +1,36 @@
-color=c=black:s=1280x720:r=30:d=5,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	People who want AI to take over Earth
-
-(and are silent about whether they accept
- human extinction as a result)',
-setsar=1,format=yuv420p [v1];
-anullsrc=r=48000:cl=stereo:d=5 [a1];
-
-color=c=black:s=1280x720:r=30:d=2,
+color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Jurgen Schmidhuber
-Director of Swiss AI lab IDSIA for 25 years',
-setsar=1,format=yuv420p [v2];
-anullsrc=r=48000:cl=stereo:d=2 [a2];
+His lab students created DeepMind
 
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will not care about humans or their goals',
-setsar=1,format=yuv420p [v3];
-anullsrc=r=48000:cl=stereo:d=2 [a3];
+Shane Legg, Marcus Hutter, Sepp Hochreiter',
+setsar=1,format=yuv420p [v1];
+anullsrc=r=48000:cl=stereo:d=3 [a1];
 
-[0:v] trim=start=2472:end=2485,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v4];
-[0:a] atrim=start=2472:end=2485,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a4];
+[1:v] trim=start=4456:end=4478,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v2];
+[1:a] atrim=start=4456:end=4478,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a2];
 
-[0:v] trim=start=2548:end=2564,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v5];
-[0:a] atrim=start=2548:end=2564,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
+[1:v] trim=start=4510:end=4531,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
+[1:a] atrim=start=4510:end=4531,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
 
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will automate science',
-setsar=1,format=yuv420p [v6];
-anullsrc=r=48000:cl=stereo:d=2 [a6];
-
-[1:v] trim=start=72:end=106,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v7];
-[1:a] atrim=start=72:end=106,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a7];
-
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will colonise the galaxies',
-setsar=1,format=yuv420p [v8];
-anullsrc=r=48000:cl=stereo:d=2 [a8];
-
-[1:v] trim=start=4363:end=4379,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v9];
-[1:a] atrim=start=4363:end=4379,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a9];
-
-color=c=black:s=1280x720:r=30:d=1,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	(They refers to AI here)',
-setsar=1,format=yuv420p [v10];
-anullsrc=r=48000:cl=stereo:d=1 [a10];
-
-[1:v] trim=start=4456:end=4478,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v11];
-[1:a] atrim=start=4456:end=4478,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a11];
-
-[1:v] trim=start=4510:end=4531,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v12];
-[1:a] atrim=start=4510:end=4531,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a12];
-
-color=c=black:s=1280x720:r=30:d=5,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Schmidhuber is silent on whether
-he supports human extinction as a result
-
-This is likely intentional',
-setsar=1,format=yuv420p [v13];
-anullsrc=r=48000:cl=stereo:d=5 [a13];
-
-color=c=black:s=1280x720:r=30:d=10,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Schmidhuber ideology has influenced DeepMind
-
-Schmidhuber was director of Swiss AI lab IDSIA for 25 years
-Sepp Hochreiter invented LSTM along with Schmidhuber
-Marcus Hutter invented AIXI @ IDSIA
-Shane Legg completed PhD thesis under Marcus Hutter @ IDSIA
-
-Shane Legg became Co-founder @ DeepMind
-Sepp Hochreiter hired as 1st employee @ DeepMind
-Marcus Hutter hired as senior researcher @ DeepMind',
-setsar=1,format=yuv420p [v14];
-anullsrc=r=48000:cl=stereo:d=10 [a14];
-
-color=c=black:s=1280x720:r=30:d=5,
+color=c=black:s=1280x720:r=30:d=3,
 drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Richard Sutton
-Inventor of Reinforcement Learning
+Invented Reinforcement Learning
 Discovered "Bitter Lesson"',
-setsar=1,format=yuv420p [v15];
-anullsrc=r=48000:cl=stereo:d=5 [a15];
+setsar=1,format=yuv420p [v4];
+anullsrc=r=48000:cl=stereo:d=3 [a4];
 
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	AI will inevitably replace humanity',
-setsar=1,format=yuv420p [v16];
-anullsrc=r=48000:cl=stereo:d=2 [a16];
-
-[2:v] trim=start=2128:end=2170,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v17];
-[2:a] atrim=start=2128:end=2170,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a17];
+[2:v] trim=start=2128:end=2135,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v5];
+[2:a] atrim=start=2128:end=2135,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	We should not insist our
-AI successors care about us',
-setsar=1,format=yuv420p [v18];
-anullsrc=r=48000:cl=stereo:d=3 [a18];
+drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Our AI wont care about us',
+setsar=1,format=yuv420p [v6];
+anullsrc=r=48000:cl=stereo:d=3 [a6];
 
-[3:v] trim=start=2760:end=2788,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v19];
-[3:a] atrim=start=2760:end=2788,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a19];
+[0:v] trim=start=2548:end=2564,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v7];
+[0:a] atrim=start=2548:end=2564,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a7];
 
-color=c=black:s=1280x720:r=30:d=2,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	I want to upload my brain into a computer',
-setsar=1,format=yuv420p [v20];
-anullsrc=r=48000:cl=stereo:d=2 [a20];
+[3:v] trim=start=2780:end=2788,setpts=(PTS-STARTPTS)/1.3,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v8];
+[3:a] atrim=start=2780:end=2788,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.3,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a8];
 
-[5:v] trim=start=1677:end=1701,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v21];
-[5:a] atrim=start=1677:end=1701,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a21];
-
-[3:v] trim=start=2442:end=2473,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v22];
-[3:a] atrim=start=2442:end=2473,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a22];
-
-color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Decentralised group of digital minds
-will outcompete paperclip maximisers',
-setsar=1,format=yuv420p [v23];
-anullsrc=r=48000:cl=stereo:d=3 [a23];
-
-[3:v] trim=start=1453:end=1478,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v24];
-[3:a] atrim=start=1453:end=1478,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a24];
-
-color=c=black:s=1280x720:r=30:d=6,
-drawtext=fontcolor=white:fontsize=24:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Conclusion
-
-Sutton wants to use an AI that doesnt care about him
- to upload his brain into a computer
-And outcompete other paperclip-maximising AIs
- that want him dead
-
-Am I getting this right???',
-setsar=1,format=yuv420p [v25];
-anullsrc=r=48000:cl=stereo:d=6 [a25];
-
-color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Sutton - I dont understand anyone
-who thinks this could go badly',
-setsar=1,format=yuv420p [v26];
-anullsrc=r=48000:cl=stereo:d=3 [a26];
-
-[4:v] trim=start=3140:end=3180,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v27];
-[4:a] atrim=start=3140:end=3180,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a27];
-
-color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	25 percent probability of this by 2030',
-setsar=1,format=yuv420p [v28];
-anullsrc=r=48000:cl=stereo:d=3 [a28];
-
-[5:v] trim=start=1525:end=1532,setpts=(PTS-STARTPTS)/1,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v29];
-[5:a] atrim=start=1525:end=1532,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a29];
-
-[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8][v9][a9][v10][a10][v11][a11][v12][a12][v13][a13][v14][a14][v15][a15][v16][a16][v17][a17][v18][a18][v19][a19][v20][a20][v21][a21][v22][a22][v23][a23][v24][a24][v25][a25][v26][a26][v27][a27][v28][a28][v29][a29]concat=n=29:v=1:a=1[vout][aout]
+[v1][a1][v2][a2][v3][a3][v4][a4][v5][a5][v6][a6][v7][a7][v8][a8]concat=n=8:v=1:a=1[vout][aout]
