@@ -1,16 +1,14 @@
 
-title	3	48	Jurgen Schmidhuber\nHis lab students created DeepMind\n\nShane Legg, Marcus Hutter, Sepp Hochreiter
-file	1	4456	4478	1.3
-file	1	4510	4531	1.3
+title	3	48	Jurgen Schmidhuber\nHis lab students created DeepMind\n\nShane Legg\nMarcus Hutter\nSepp Hochreiter
+file	1	4456.5	4477.5	1.4
+file	1	4510	4520	1.4
 
-title	3	48	Richard Sutton\nInvented Reinforcement Learning\nDiscovered "Bitter Lesson"
-file	2	2128	2135	1.3
-
+title	3	48	Richard Sutton\nInvented RL\nWrote "Bitter Lesson"
+file	2	2128	2140	1.4
 
 title	3	48	Our AI wont care about us
-file	0	2548	2564	1.3
-
-file	3	2780	2788	1.3
+file	0	2548	2564	1.4
+file	3	2775	2788	1.4
 
 
 
