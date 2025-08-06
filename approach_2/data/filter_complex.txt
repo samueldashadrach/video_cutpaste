@@ -1,5 +1,5 @@
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Jurgen Schmidhuber
+drawtext=fontcolor=white:fontsize=36:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Jurgen Schmidhuber
 His lab students created DeepMind
 
 Shane Legg
@@ -11,11 +11,11 @@ anullsrc=r=48000:cl=stereo:d=3 [a1];
 [1:v] trim=start=4456.5:end=4477.5,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v2];
 [1:a] atrim=start=4456.5:end=4477.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a2];
 
-[1:v] trim=start=4510:end=4520,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
-[1:a] atrim=start=4510:end=4520,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
+[1:v] trim=start=4510:end=4519.5,setpts=(PTS-STARTPTS)/1.4,fps=30,scale=1280:-2,setsar=1,format=yuv420p [v3];
+[1:a] atrim=start=4510:end=4519.5,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a3];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Richard Sutton
+drawtext=fontcolor=white:fontsize=36:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Richard Sutton
 Invented RL
 Wrote "Bitter Lesson"',
 setsar=1,format=yuv420p [v4];
@@ -25,7 +25,7 @@ anullsrc=r=48000:cl=stereo:d=3 [a4];
 [2:a] atrim=start=2128:end=2140,asetpts=PTS-STARTPTS,loudnorm=I=-16:LRA=11:TP=-1.5,atempo=1.4,aformat=sample_fmts=fltp:channel_layouts=stereo:sample_rates=48000 [a5];
 
 color=c=black:s=1280x720:r=30:d=3,
-drawtext=fontcolor=white:fontsize=48:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Our AI wont care about us',
+drawtext=fontcolor=white:fontsize=36:line_spacing=10:x=(w-text_w)/2:y=(h-text_h)/2:text='	Our AI wont or shouldnt care about us',
 setsar=1,format=yuv420p [v6];
 anullsrc=r=48000:cl=stereo:d=3 [a6];
 
